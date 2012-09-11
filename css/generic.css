@@ -1,7 +1,7 @@
 /* generic */
 
 body {
-    font-family: Arial, sans-serif; /* Bootstrap default is Helvetica (Neue) */
+    font-family: 'Helvetica Neue', Helvetica, sans-serif; /* Bootstrap default is Helvetica (Neue) */
 }
 
 .small {

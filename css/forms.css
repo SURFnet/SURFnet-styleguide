@@ -1,0 +1,27 @@
+.btn {
+  background-color: #FFF;
+  background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.1), rgba(170, 170, 170, 0.3));
+  background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 0.1), rgba(170, 170, 170, 0.3));
+  background-size: 100% 100%;
+  border-radius: 3px;
+  font-size: 16px;
+  padding: 8px 13px 9px;
+  -webkit-transition: background-color 0.2s;
+}
+
+  .btn:hover {
+    background-color: #EEE;
+    background-position: 0 0;
+    -webkit-transition: background-color 0.2s;
+  }
+
+  .btn-primary {
+    background-color: #68C6dE;
+    background-image: -webkit-linear-gradient(top, rgba(104, 198, 222, 0), rgba(104, 198, 222, 0.1));
+    border-color: #7DB4C1 #4d97AB #408AA3 #4d97AB;
+  }
+
+  .btn-primary:hover {
+    background-color: #53B3D2;
+    -webkit-transition: background-color 0.2s;
+  }
