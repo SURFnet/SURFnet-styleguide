@@ -23,8 +23,8 @@
 
         <!-- Non-bootstrap Styling -->
         <link rel="stylesheet" href="../css/layout.css">
-        <link rel="stylesheet" href="../css/forms.css">
         <link rel="stylesheet" href="../css/generic.css">
+        <link rel="stylesheet" href="../css/screen.css">
         <link rel="stylesheet" href="../css/component-userbox.css">
 
         <!--[if lt IE 9]>
@@ -130,12 +130,22 @@
                 <h2>Buttons</h2>
 
                 <div class="content">
-                    <a href="#" class="btn btn-primary">Primaire actie</a>
-                    <a href="#" class="btn btn-primary btn-primary-alt">Primaire actie</a>
-                    <a href="#" class="btn btn-secondary">Secundaire actie</a>
+                    <p>
+                        <a href="#" class="btn btn-primary">Primaire actie</a>
+                        <a href="#" class="btn btn-primary btn-primary-alt">Primaire actie</a>
+                        <a href="#" class="btn btn-secondary">Secundaire actie</a>
 
-                    <a href="#" class="btn btn-primary btn-group btn-group-first">Meerdere</a>
-                    <a href="#" class="btn btn-primary btn-group btn-group-last">… acties</a>
+                        <a href="#" class="btn btn-group btn-group-first">Meerdere</a>
+                        <a href="#" class="btn btn-group btn-group-last">… acties</a>
+                    </p>
+                    <p>
+                        <a href="#" class="btn btn-primary btn-small">Primaire actie</a>
+                        <a href="#" class="btn btn-primary btn-small btn-primary-alt">Primaire actie</a>
+                        <a href="#" class="btn btn-small">Secundaire actie</a>
+
+                        <a href="#" class="btn btn-small btn-group btn-group-first">Meerdere</a>
+                        <a href="#" class="btn btn-small btn-group btn-group-last">… acties</a>
+                    </p>
                 </div>
 
             </section>
@@ -164,6 +174,54 @@
                             <a href="form.html">Form</a>
                         </li>
                     </ul>
+                </div>
+
+            </section>
+
+            <section>
+
+                <h2>Headers & Menus</h2>
+
+                <div class="content">
+                    <h3>Main header with primary menu</h3>
+                    <header class="header">
+                        <a class="logo" href="#">
+                            <img src="../images/surf-conext-logo.png" alt="Surf Conext">
+                        </a>
+                        <nav class="primary-navigation">
+                            <ul>
+                                <li class="user">Welcome <a href="#">Peter Jones</a></li>
+                                <li class="configuration"><a href="#">Configuration</a></li>
+                                <li class="logout"><a href="#">Logout</a></li>
+                            </ul>
+                        </nav>
+                    </header>
+                    
+                    <h3>Secondary menu</h3>
+                    <nav class="secondary-menu">
+                        <ul>
+                            <li class="apps active"><a href="#">Applicaties</a>
+                                <ul>
+                                    <li><a href="#">Mijn apps</a></li>
+                                    <li><a href="#">Alle apps</a></li>
+                                    <li><a href="#">Populair</a></li>
+                                    <li><a href="#">Nieuw</a></li>
+                                </ul>
+                            </li>
+                            <li class="groups"><a href="#">Groepen</a>
+                                <ul>
+                                    <li><a href="#">Mijn groepen</a></li>
+                                    <li><a href="#">Alle groepen</a></li>
+                                    <li><a href="#">Populaire groepen</a></li>
+                                    <li><a href="#">Nieuwsgroepen</a></li>
+                                    <li><a href="#">E-mail</a></li>
+                                </ul>
+                            </li>
+                            <li class="requests"><a href="#">Verzoeken</a></li>
+                            <li class="stats"><a href="#">Statistieken</a></li>
+                            <li class="profile"><a href="#">Profiel</a></li>
+                        </ul>
+                    </nav>
                 </div>
 
             </section>
@@ -813,6 +871,7 @@
         <script src="../js/modules/table.js"></script>
         <script src="../js/modules/form.js"></script>
         <script src="../js/modules/message.js"></script>
+        <script src="../js/modules/secondary-menu.js"></script>
 
     </body>
 </html>

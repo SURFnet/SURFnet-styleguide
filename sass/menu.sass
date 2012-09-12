@@ -1,0 +1,87 @@
+.secondary-menu
+  margin: 1em 2%
+  max-width: 175px
+  width: 20%
+
+  ul
+    margin: 0
+    list-style: none
+
+  > ul > li
+    margin: 0 0 17px 0
+    padding: 0
+    position: relative
+
+    &::before
+      background: url(../images/sprite-secondary-menu.png)
+      background-position: -30px 0
+      content: ''
+      height: 30px
+      left: 0
+      pointer-events: none
+      position: absolute
+      top: 0
+      width: 30px
+
+    &:hover::before,
+    &:focus::before,
+    &.active::before
+      background-position: 0 0
+
+    &.groups
+      &::before
+        background-position: -30px -30px
+      &:hover::before,
+      &:focus::before,
+      &.active::before
+        background-position: 0 -30px
+
+    &.requests
+      &::before
+        background-position: -30px -60px
+      &:hover::before,
+      &:focus::before,
+      &.active::before
+        background-position: 0 -60px
+
+    &.stats
+      &::before
+        background-position: -30px -90px
+      &:hover::before,
+      &:focus::before,
+      &.active::before
+        background-position: 0 -90px
+
+    &.profile
+      &::before
+        background-position: -30px -120px
+      &:hover::before,
+      &:focus::before,
+      &.active::before
+        background-position: 0 -120px
+
+  a
+    color: #7F7F7F
+    display: block
+    font-size: 18px
+    font-weight: lighter
+    letter-spacing: 0.06em
+    padding: 4px 0 4px 40px
+    +single-transition(color, 0.2s)
+
+    &:hover,
+    &:focus
+      color: #0173BC
+      +single-transition(color, 0.2s)
+      
+  .active > a
+    color: #0173BC
+
+  ul ul
+    li
+      padding: 0
+
+    a
+      color: #626262
+      font-size: 14px
+      padding: 4px 0 0 40px
