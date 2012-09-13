@@ -28,6 +28,7 @@ app.form = function(){
         initDropDownReload();
         initDatepickers();
         initAutoSuggest();
+        initSelect2();
 
     };
 
@@ -352,6 +353,11 @@ app.form = function(){
             }
         }
     };
+
+    var initSelect2 = function() {
+        var elms = $('select');
+        elms.select2();
+    }
 
     return {
         init: init

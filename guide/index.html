@@ -17,6 +17,7 @@
         <link rel="stylesheet" href="../css/bootstrap-popover.css">
         <link rel="stylesheet" href="../css/bootstrap-table.css">
         <link rel="stylesheet" href="../css/bootstrap-tooltip.css">
+        <link rel="stylesheet" href="../css/select2.css">
 
         <!-- Iconic font for Bootstrap -->
         <link rel="stylesheet" href="../css/font-awesome.css">
@@ -34,96 +35,20 @@
     </head>
     <body>
 
-        <div class="wrapper">
-
-            <header>
-                <a href="/">Home</a>
-                <h1>Bandwidth on Demand</h1>
-            </header>
-
-            <section class="user-box content-dense">
-                <span class="user-name">ReneS</span>
-                <a href="#" class="logout">Logout <i class="icon-signout"></i></a>
-
-                <!-- b:dropdown -->
-
-                <div class="dropdown">
-
-                    <div class="dropdown-toggle user-role-noc" data-toggle="dropdown">
-                        <div class="user">
-                            NOC Engineer<br>
-                            Institute A
-                            <b class="caret"></b>
-                        </div>
-                    </div>
-
-                    <form action="#" method="POST" class="dropdown-menu">
-                        <ul>
-                            <li class="user-role-default" data-roleId="default">
-                                <div class="user">
-                                    Default/New User
-                                </div>
-                            </li>
-                            <li class="user-role-manager" data-roleId="manager">
-                                <div class="user">
-                                    Manager/Admin<br>
-                                    Institute C
-                                </div>
-                            </li>
-                            <li class="user-role-user" data-roleId="user">
-                                <div class="user">
-                                    BoD User<br>
-                                    Some institute with a very long and uncommon name
-                                </div>
-                            </li>
-                            <li class="user-role-noc" data-roleId="noc">
-                                <div class="user">
-                                    NOC Engineer
-                                </div>
-                            </li>
-                        </ul>
-                    </form>
-
-                </div>
-
-            </section>
-
-            <!-- b:navbar -->
-
-            <nav class="navbar">
-                <div class="navbar-inner">
-                    <div class="container">
-                        <ul class="nav">
-                            <li><a href="#">Overview</a></li>
-                            <li><a href="#">Reservations</a></li>
-                            <li><a href="#">Virtual ports</a></li>
-                            <li class="active"><a href="#">Physical ports</a></li>
-                            <li><a href="#">Teams</a></li>
-                        </ul>
-                    </div>
-                </div>
+        <header class="header">
+            <a class="logo" href="#">
+                <img src="../images/surf-conext-logo.png" alt="Surf Conext">
+            </a>
+            <nav class="primary-navigation">
+                <ul>
+                    <li class="user">Welcome <a href="#">Peter Jones</a></li>
+                    <li class="configuration"><a href="form.html">Forms</a></li>
+                    <li class="logout"><a href="#">Logout</a></li>
+                </ul>
             </nav>
+        </header>
 
-            <div id="alerts">
-
-                <div class="alert">
-                    <a class="close" data-dismiss="alert">&times;</a>
-                    Some message to warn the user.
-                </div>
-                <div class="alert alert-error">
-                    <a class="close" data-dismiss="alert">&times;</a>
-                    Some error message to tell the user the world has come to an end.
-                </div>
-                <div class="alert alert-success">
-                    <a class="close" data-dismiss="alert">&times;</a>
-                    Some message to tell the user the action <b>Save</b> was a success.
-                </div>
-                <div class="alert alert-info">
-                    <a class="close" data-dismiss="alert">&times;</a>
-                    Informing the user <b>Truus</b> about something...
-                </div>
-
-            </div>
+        <div class="wrapper">
 
             <section>
 
@@ -146,34 +71,6 @@
                         <a href="#" class="btn btn-small btn-group btn-group-first">Meerdere</a>
                         <a href="#" class="btn btn-small btn-group btn-group-last">… acties</a>
                     </p>
-                </div>
-
-            </section>
-
-            <section>
-
-                <h2>Links that do a form post</h2>
-
-                <div class="content">
-                    <a href="form.html?id=12&type=new" class="btn btn-primary" data-form="true">Post request</a>
-                    <a href="form.html" class="btn btn-primary" data-form="true" data-confirm="Are you sure?">Post request with a confirm</a>
-                    <a href="form.html" class="btn btn-primary" data-form="true" data-success="The post request was successfull">Post request with a succes message</a>
-                    <a href="form.html" data-form="true" data-confirm="Just press ok and see the message!" data-success="Yes we did it again!!">Post with confirm and success message</a>
-                </div>
-
-            </section>
-
-            <section>
-
-                <h2>Default content</h2>
-
-                <div class="content">
-                    <p>Paragraph, with unordered list:</p>
-                    <ul>
-                        <li>
-                            <a href="form.html">Form</a>
-                        </li>
-                    </ul>
                 </div>
 
             </section>
@@ -225,6 +122,99 @@
                 </div>
 
             </section>
+
+            <section>
+
+                <h2>Default content</h2>
+
+                <div class="content">
+                    <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac tellus tortor. Ut at sapien libero. Mauris aliquam ligula mi, quis mattis leo. Sed vestibulum nisl vel dui tristique ornare. Suspendisse molestie molestie arcu vitae auctor. Ut consequat consectetur dolor, eget tristique ante vehicula vitae. Curabitur molestie metus ac purus molestie hendrerit. Sed quis felis lorem. Quisque ac nunc sit amet risus accumsan interdum vitae ut sem. Nam interdum posuere nisl, tempor rutrum quam adipiscing vel. Cras sollicitudin, enim u<a href="#">t faucibus egestas, risus libero</a> tincidunt leo, nec tempus arcu dolor vitae nunc. Aliquam nunc orci, aliquet viverra porttitor nec, luctus non nisi. Donec urna libero, ultricies ac bibendum a, mattis sed tortor. Maecenas non arcu ut lectus rutrum tristique. Quisque sodales pretium eros, non adipiscing lacus blandit et. Sed tincidunt ultrices nisi, eget porta lacus lobortis at.</p>
+
+                    <h2><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a></h2>
+                    <p>Quisque eu aliquam mi. Nunc ut urna ligula, ut eleifend massa. Nullam et mauris ante, in condimentum neque. Nulla in mauris nec sem tincidunt vestibulum quis vel quam. Duis eu tempor augue. Nam congue, eros quis egestas tempor, velit nibh scelerisque felis, at ornare augue libero ac odio. Nam mi erat, condimentum et vestibulum blandit, vestibulum ut erat. Nunc lacinia adipiscing odio, eget iaculis nibh fringilla tincidunt. Sed egestas consequat fringilla. Aenean lacus nibh, iaculis vitae tempus in, ullamcorper ac leo. Praesent ante tellus, laoreet et blandit vitae, luctus at nibh. Etiam vitae enim ut urna tincidunt eleifend. Nulla in nisi dui, eget eleifend nibh. Morbi gravida, massa sed molestie iaculis, tortor tellus consectetur odio, elementum placerat nulla leo quis tellus.</p>
+
+                    <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
+                    <p>Etiam a mauris massa. Pellentesque a magna nec nunc posuere laoreet at non orci. Maecenas laoreet rutrum odio eu commodo. Vivamus rutrum, mi id pharetra molestie, est tortor auctor sem, vel blandit magna mauris id sapien. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec elementum rutrum lectus non accumsan. Quisque vitae hendrerit lacus. Quisque aliquam mauris sit amet neque facilisis rutrum. Quisque est neque, tristique eu tempor eget, interdum eget neque. Integer a erat lectus. Pellentesque vestibulum eleifend felis, vitae auctor magna fermentum porttitor. Duis vitae magna turpis, eu gravida nulla. Proin lorem neque, lacinia ut faucibus vel, pulvinar vitae magna. Morbi fringilla blandit luctus. Sed vel orci eget augue lobortis interdum.</p>
+
+                    <ul>
+                        <li>Etiam a mauris massa. Pellentesque a magna nec nunc posuere laoreet at non orci.</li>
+                        <li>
+                            Quisque aliquam mauris sit
+                            <ul>
+                                <li>Nested possible</li>
+                                <li>More nested possible</li>
+                            </ul>
+                        </li>
+                        <li>vitae auctor magna fermentum porttitor</li>
+                    </ul>
+
+                    <ol>
+                        <li>Etiam a mauris massa. Pellentesque a magna nec nunc posuere laoreet at non orci.</li>
+                        <li>
+                            Quisque aliquam mauris sit
+                            <ol>
+                                <li>Nested possible</li>
+                                <li>More nested possible</li>
+                            </ol>
+                        </li>
+                        <li>vitae auctor magna fermentum porttitor</li>
+                    </ol>
+                </div>
+
+            </section>
+
+            <div id="alerts">
+                <h3>Alerts</h3>
+
+                <div class="alert">
+                    <a class="close" data-dismiss="alert">&times;</a>
+                    Some message to warn the user.
+                </div>
+                <div class="alert alert-error">
+                    <a class="close" data-dismiss="alert">&times;</a>
+                    Some error message to tell the user the world has come to an end.
+                </div>
+                <div class="alert alert-success">
+                    <a class="close" data-dismiss="alert">&times;</a>
+                    Some message to tell the user the action <b>Save</b> was a success.
+                </div>
+                <div class="alert alert-info">
+                    <a class="close" data-dismiss="alert">&times;</a>
+                    Informing the user <b>Truus</b> about something...
+                </div>
+
+            </div>
+
+            <section>
+
+                <h2>Links that do a form post</h2>
+
+                <div class="content">
+                    <a href="form.html?id=12&type=new" class="btn btn-primary" data-form="true">Post request</a>
+                    <a href="form.html" class="btn btn-primary" data-form="true" data-confirm="Are you sure?">Post request with a confirm</a>
+                    <a href="form.html" class="btn btn-primary" data-form="true" data-success="The post request was successfull">Post request with a succes message</a>
+                    <a href="form.html" data-form="true" data-confirm="Just press ok and see the message!" data-success="Yes we did it again!!">Post with confirm and success message</a>
+                </div>
+
+            </section>
+
+
+            <!-- b:navbar -->
+
+            <nav class="navbar">
+                <div class="navbar-inner">
+                    <div class="container">
+                        <ul class="nav">
+                            <li><a href="#">Overview</a></li>
+                            <li><a href="#">Reservations</a></li>
+                            <li><a href="#">Virtual ports</a></li>
+                            <li class="active"><a href="#">Physical ports</a></li>
+                            <li><a href="#">Teams</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
 
             <section>
 
@@ -591,44 +581,44 @@
                 </div>
             </section>
 
-            <section>
+            <section id="pagination">
 
                 <h2>Pagination states</h2>
 
                 <div class="content">
                     <div class="pagination pagination-below-table">
                         <ul>
-                            <li class="disabled"><a href="#">&#8592;</a></li>
+                            <li class="disabled"><a href="#">previous</a></li>
                             <li class="active"><a href="#">1</a></li>
                             <li><a href="#">2</a></li>
                             <li class="disabled"><a href="#">...</a></li>
                             <li><a href="#">7</a></li>
                             <li><a href="#">8</a></li>
-                            <li><a href="#">&#8594;</a></li>
+                            <li><a href="#">next</a></li>
                         </ul>
                     </div>
                     <div class="pagination pagination-below-table">
                         <ul>
-                            <li><a href="#">&#8592;</a></li>
+                            <li><a href="#">previous</a></li>
                             <li><a href="#">1</a></li>
                             <li class="active"><a href="#">2</a></li>
                             <li><a href="#">3</a></li>
                             <li class="disabled"><a href="#">...</a></li>
                             <li><a href="#">7</a></li>
                             <li><a href="#">8</a></li>
-                            <li><a href="#">&#8594;</a></li>
+                            <li><a href="#">next</a></li>
                         </ul>
                     </div>
                     <div class="pagination pagination-below-table">
                         <ul>
-                            <li><a href="#">&#8592;</a></li>
+                            <li><a href="#">previous</a></li>
                             <li><a href="#">1</a></li>
                             <li><a href="#">2</a></li>
                             <li><a href="#">3</a></li>
                             <li class="disabled"><a href="#">...</a></li>
                             <li><a href="#">7</a></li>
                             <li class="active"><a href="#">8</a></li>
-                            <li class="disabled"><a href="#">&#8594;</a></li>
+                            <li class="disabled"><a href="#">next</a></li>
                         </ul>
                     </div>
                 </div>
@@ -866,6 +856,7 @@
 
         <script src="../js/jquery/jquery-1.7.2.min.js"></script>
         <script src="../js/bootstrap/bootstrap-2.0.3.min.js"></script>
+        <script src="../js/jquery/select2.js"></script>
         <script src="../js/main.js"></script>
         <script src="../js/modules/global.js"></script>
         <script src="../js/modules/table.js"></script>
