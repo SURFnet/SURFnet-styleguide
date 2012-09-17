@@ -59,6 +59,7 @@ input[type="color"],
 
 
 .btn
+  +filter-gradient(#FFF, #E6E6E6)
   +background(linear-gradient(top, rgba(255, 255, 255, 0.1), rgba(170, 170, 170, 0.3)), #FFF)
   background-size: 100% 100%
   +border-radius(3px)
@@ -70,26 +71,32 @@ input[type="color"],
 
   &:hover,
   &:focus
+    +filter-gradient(#F3F3F3, #F3F3F3)
     background-color: #F3F3F3
     background-position: 0 0
     +single-transition(background-color, 0.2s)
+    outline: none
 
 .btn-primary
-  +background(linear-gradient(top, rgba(104, 198, 222, 0), rgba(104, 198, 222, 0.1)), #68C6dE)
-  border-color: #7DB4C1 #4d97AB #408AA3 #4d97AB
+  +filter-gradient(#6DC5E1, #56A3B7)
+  +background(linear-gradient(top, rgba(104, 198, 222, 0), rgba(104, 198, 222, 0.2)), #68C6DE)
+  border-color: #7DB4C1 #4D97AB #408AA3 #4D97AB
   +single-transition(background-color, 0.2s)
   
   &:hover,
   &:focus
+    +filter-gradient(#56A3B7, #56A3B7)
     background-color: #60BFDA
     +single-transition(background-color, 0.2s)
 
 .btn-primary-alt
+  +filter-gradient(#EC9900, #DD9000)
   +background(linear-gradient(top, rgba(239, 153, 0, 0), rgba(155, 100, 3, 0.2)), #EF9900)
   border-color: #CB9A40 #B66600 #B55E00 #B66600
   
   &:hover,
   &:focus
+    +filter-gradient(#DD9000, #DD9000)
     background-color: #E08F01
     +single-transition(background-color, 0.2s)
 
