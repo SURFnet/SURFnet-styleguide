@@ -194,7 +194,7 @@ input[type="color"],
     display: inline-block;
     margin-right: 10px; }
 
-/* line 61, ../sass/forms.sass */
+/* line 60, ../sass/forms.sass */
 .btn {
   *zoom: 1;
   filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFFFFFFF', endColorstr='#FFE6E6E6');
@@ -209,15 +209,18 @@ input[type="color"],
   -ms-border-radius: 3px;
   -o-border-radius: 3px;
   border-radius: 3px;
+  float: none;
   font-size: 16px;
   margin-left: 7px;
   overflow: hidden;
   padding: 8px 13px 9px;
+  position: relative !important;
   -webkit-transition: background-color 0.2s;
   -moz-transition: background-color 0.2s;
   -o-transition: background-color 0.2s;
-  transition: background-color 0.2s; }
-  /* line 72, ../sass/forms.sass */
+  transition: background-color 0.2s;
+  zoom: 1; }
+  /* line 74, ../sass/forms.sass */
   .btn:hover, .btn:focus {
     *zoom: 1;
     filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFF3F3F3', endColorstr='#FFF3F3F3');
@@ -229,7 +232,7 @@ input[type="color"],
     transition: background-color 0.2s;
     outline: none; }
 
-/* line 80, ../sass/forms.sass */
+/* line 82, ../sass/forms.sass */
 .btn-primary {
   *zoom: 1;
   filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FF6DC5E1', endColorstr='#FF56A3B7');
@@ -243,7 +246,7 @@ input[type="color"],
   -moz-transition: background-color 0.2s;
   -o-transition: background-color 0.2s;
   transition: background-color 0.2s; }
-  /* line 86, ../sass/forms.sass */
+  /* line 88, ../sass/forms.sass */
   .btn-primary:hover, .btn-primary:focus {
     *zoom: 1;
     filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FF56A3B7', endColorstr='#FF56A3B7');
@@ -253,7 +256,7 @@ input[type="color"],
     -o-transition: background-color 0.2s;
     transition: background-color 0.2s; }
 
-/* line 92, ../sass/forms.sass */
+/* line 94, ../sass/forms.sass */
 .btn-primary-alt {
   *zoom: 1;
   filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFEC9900', endColorstr='#FFDD9000');
@@ -263,7 +266,7 @@ input[type="color"],
   background: -o-linear-gradient(top, rgba(239, 153, 0, 0), rgba(155, 100, 3, 0.2)), #ef9900;
   background: linear-gradient(top, rgba(239, 153, 0, 0), rgba(155, 100, 3, 0.2)), #ef9900;
   border-color: #cb9a40 #b66600 #b55e00 #b66600; }
-  /* line 97, ../sass/forms.sass */
+  /* line 99, ../sass/forms.sass */
   .btn-primary-alt:hover, .btn-primary-alt:focus {
     *zoom: 1;
     filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFDD9000', endColorstr='#FFDD9000');
@@ -273,7 +276,7 @@ input[type="color"],
     -o-transition: background-color 0.2s;
     transition: background-color 0.2s; }
 
-/* line 103, ../sass/forms.sass */
+/* line 105, ../sass/forms.sass */
 .btn-group {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
@@ -282,7 +285,7 @@ input[type="color"],
   border-radius: 0;
   margin-left: -9px !important;
   margin-right: 0 !important; }
-  /* line 108, ../sass/forms.sass */
+  /* line 110, ../sass/forms.sass */
   .btn-group.btn-group-first {
     -moz-border-radius-topleft: 3px;
     -webkit-border-top-left-radius: 3px;
@@ -291,7 +294,7 @@ input[type="color"],
     -webkit-border-bottom-left-radius: 3px;
     border-bottom-left-radius: 3px;
     margin-left: 7px !important; }
-  /* line 112, ../sass/forms.sass */
+  /* line 114, ../sass/forms.sass */
   .btn-group.btn-group-last {
     -moz-border-radius-topright: 3px;
     -webkit-border-top-right-radius: 3px;
@@ -300,7 +303,7 @@ input[type="color"],
     -webkit-border-bottom-right-radius: 3px;
     border-bottom-right-radius: 3px; }
 
-/* line 115, ../sass/forms.sass */
+/* line 117, ../sass/forms.sass */
 .btn-small {
   font-size: 14px;
   padding: 4px 13px 5px; }
@@ -378,16 +381,16 @@ input[type="color"],
       .header nav .user a:hover, .header nav .user a:focus {
         color: #626262; }
     /* line 65, ../sass/header.sass */
-    .header nav .configuration::before,
-    .header nav .logout::before {
+    .header nav .configuration:before,
+    .header nav .logout:before {
       color: #7e7e7e;
       font-family: FontAwesome;
       margin-right: 10px; }
     /* line 71, ../sass/header.sass */
-    .header nav .configuration::before {
+    .header nav .configuration:before {
       content: "\f013"; }
     /* line 74, ../sass/header.sass */
-    .header nav .logout::before {
+    .header nav .logout:before {
       content: "\f045"; }
 
 /* line 1, ../sass/menu.sass */
@@ -405,7 +408,7 @@ input[type="color"],
     padding: 0;
     position: relative; }
     /* line 15, ../sass/menu.sass */
-    .secondary-menu > ul > li::before {
+    .secondary-menu > ul > li:before {
       background: url(../images/sprite-secondary-menu.png);
       background-position: -30px 0;
       content: "";
@@ -416,31 +419,31 @@ input[type="color"],
       top: 0;
       width: 30px; }
     /* line 26, ../sass/menu.sass */
-    .secondary-menu > ul > li:hover::before, .secondary-menu > ul > li:focus::before, .secondary-menu > ul > li.active::before {
+    .secondary-menu > ul > li:hover:before, .secondary-menu > ul > li:focus:before, .secondary-menu > ul > li.active:before {
       background-position: 0 0; }
     /* line 32, ../sass/menu.sass */
-    .secondary-menu > ul > li.groups::before {
+    .secondary-menu > ul > li.groups:before {
       background-position: -30px -30px; }
     /* line 34, ../sass/menu.sass */
-    .secondary-menu > ul > li.groups:hover::before, .secondary-menu > ul > li.groups:focus::before, .secondary-menu > ul > li.groups.active::before {
+    .secondary-menu > ul > li.groups:hover:before, .secondary-menu > ul > li.groups:focus:before, .secondary-menu > ul > li.groups.active:before {
       background-position: 0 -30px; }
     /* line 40, ../sass/menu.sass */
-    .secondary-menu > ul > li.requests::before {
+    .secondary-menu > ul > li.requests:before {
       background-position: -30px -60px; }
     /* line 42, ../sass/menu.sass */
-    .secondary-menu > ul > li.requests:hover::before, .secondary-menu > ul > li.requests:focus::before, .secondary-menu > ul > li.requests.active::before {
+    .secondary-menu > ul > li.requests:hover:before, .secondary-menu > ul > li.requests:focus:before, .secondary-menu > ul > li.requests.active:before {
       background-position: 0 -60px; }
     /* line 48, ../sass/menu.sass */
-    .secondary-menu > ul > li.stats::before {
+    .secondary-menu > ul > li.stats:before {
       background-position: -30px -90px; }
     /* line 50, ../sass/menu.sass */
-    .secondary-menu > ul > li.stats:hover::before, .secondary-menu > ul > li.stats:focus::before, .secondary-menu > ul > li.stats.active::before {
+    .secondary-menu > ul > li.stats:hover:before, .secondary-menu > ul > li.stats:focus:before, .secondary-menu > ul > li.stats.active:before {
       background-position: 0 -90px; }
     /* line 56, ../sass/menu.sass */
-    .secondary-menu > ul > li.profile::before {
+    .secondary-menu > ul > li.profile:before {
       background-position: -30px -120px; }
     /* line 58, ../sass/menu.sass */
-    .secondary-menu > ul > li.profile:hover::before, .secondary-menu > ul > li.profile:focus::before, .secondary-menu > ul > li.profile.active::before {
+    .secondary-menu > ul > li.profile:hover:before, .secondary-menu > ul > li.profile:focus:before, .secondary-menu > ul > li.profile.active:before {
       background-position: 0 -120px; }
   /* line 63, ../sass/menu.sass */
   .secondary-menu a {
@@ -502,13 +505,14 @@ input[type="color"],
     border-right: none;
     color: #666666;
     font-size: 12px;
-    font-weight: normal; }
-    /* line 20, ../sass/tables.sass */
+    font-weight: normal;
+    height: auto; }
+    /* line 21, ../sass/tables.sass */
     .table th a,
     .table-bordered th a,
     .table-striped th a {
       color: #666666; }
-  /* line 23, ../sass/tables.sass */
+  /* line 24, ../sass/tables.sass */
   .table td,
   .table-bordered td,
   .table-striped td {
@@ -518,7 +522,7 @@ input[type="color"],
     border-right: none;
     color: black;
     padding: 20px 8px; }
-  /* line 31, ../sass/tables.sass */
+  /* line 32, ../sass/tables.sass */
   .table tr:nth-child(even) td,
   .table-bordered tr:nth-child(even) td,
   .table-striped tr:nth-child(even) td {
@@ -585,7 +589,15 @@ input[type="color"],
     pointer-events: none; }
   /* line 42, ../sass/pagination.sass */
   .pagination ul li:first-child a, .pagination ul li:last-child a {
-    background-size: 15px 8px, 100% 100%;
+    *zoom: 1;
+    filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFFFFFFF', endColorstr='#FFE7E7E7');
+    background: white;
+    background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(255, 255, 255, 0.1)), color-stop(100%, rgba(170, 170, 170, 0.3))), white;
+    background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.1), rgba(170, 170, 170, 0.3)), white;
+    background: -moz-linear-gradient(top, rgba(255, 255, 255, 0.1), rgba(170, 170, 170, 0.3)), white;
+    background: -o-linear-gradient(top, rgba(255, 255, 255, 0.1), rgba(170, 170, 170, 0.3)), white;
+    background: linear-gradient(top, rgba(255, 255, 255, 0.1), rgba(170, 170, 170, 0.3)), white;
+    background-size: 100% 100%;
     border: 1px solid lightgrey;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
@@ -600,38 +612,41 @@ input[type="color"],
     margin-left: 7px;
     overflow: hidden;
     padding: 5px 8px;
+    position: relative;
     -webkit-transition: background-color 0.2s;
     -moz-transition: background-color 0.2s;
     -o-transition: background-color 0.2s;
     transition: background-color 0.2s; }
-  /* line 57, ../sass/pagination.sass */
-  .pagination ul li:first-child a {
-    background: white;
-    background: url(../images/bg-pagination-prev.png) no-repeat 0 50%, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(255, 255, 255, 0.1)), color-stop(100%, rgba(170, 170, 170, 0.3))), white;
-    background: url(../images/bg-pagination-prev.png) no-repeat 0 50%, -webkit-linear-gradient(top, rgba(255, 255, 255, 0.1), rgba(170, 170, 170, 0.3)), white;
-    background: url(../images/bg-pagination-prev.png) no-repeat 0 50%, -moz-linear-gradient(top, rgba(255, 255, 255, 0.1), rgba(170, 170, 170, 0.3)), white;
-    background: url(../images/bg-pagination-prev.png) no-repeat 0 50%, -o-linear-gradient(top, rgba(255, 255, 255, 0.1), rgba(170, 170, 170, 0.3)), white;
-    background: url(../images/bg-pagination-prev.png) no-repeat 0 50%, linear-gradient(top, rgba(255, 255, 255, 0.1), rgba(170, 170, 170, 0.3)), white;
-    padding-left: 23px; }
-    /* line 62, ../sass/pagination.sass */
-    .pagination ul li:first-child a:hover {
+    /* line 61, ../sass/pagination.sass */
+    .pagination ul li:first-child a:hover, .pagination ul li:last-child a:hover {
       *zoom: 1;
       filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFF3F3F3', endColorstr='#FFF3F3F3');
-      background-color: #f3f3f3; }
-  /* line 66, ../sass/pagination.sass */
-  .pagination ul li:last-child a {
-    background: white;
-    background: url(../images/bg-pagination-next.png) no-repeat 100% 50%, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(255, 255, 255, 0.1)), color-stop(100%, rgba(170, 170, 170, 0.3))), white;
-    background: url(../images/bg-pagination-next.png) no-repeat 100% 50%, -webkit-linear-gradient(top, rgba(255, 255, 255, 0.1), rgba(170, 170, 170, 0.3)), white;
-    background: url(../images/bg-pagination-next.png) no-repeat 100% 50%, -moz-linear-gradient(top, rgba(255, 255, 255, 0.1), rgba(170, 170, 170, 0.3)), white;
-    background: url(../images/bg-pagination-next.png) no-repeat 100% 50%, -o-linear-gradient(top, rgba(255, 255, 255, 0.1), rgba(170, 170, 170, 0.3)), white;
-    background: url(../images/bg-pagination-next.png) no-repeat 100% 50%, linear-gradient(top, rgba(255, 255, 255, 0.1), rgba(170, 170, 170, 0.3)), white;
-    padding-right: 23px; }
-    /* line 71, ../sass/pagination.sass */
-    .pagination ul li:last-child a:hover {
-      *zoom: 1;
-      filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFF3F3F3', endColorstr='#FFF3F3F3');
-      background-color: #f3f3f3; }
-  /* line 75, ../sass/pagination.sass */
+      background-color: #f3f3f3;
+      background-position: 0 0;
+      -webkit-transition: background-color 0.2s;
+      -moz-transition: background-color 0.2s;
+      -o-transition: background-color 0.2s;
+      transition: background-color 0.2s; }
+  /* line 67, ../sass/pagination.sass */
+  .pagination ul li:first-child a::before {
+    background: url(../images/bg-pagination-prev.png);
+    content: "";
+    display: inline-;
+    display: inline-block;
+    height: 8px;
+    left: -6px;
+    position: relative;
+    width: 15px;
+    zoom: 1; }
+  /* line 78, ../sass/pagination.sass */
+  .pagination ul li:last-child a::after {
+    background: url(../images/bg-pagination-next.png);
+    content: "";
+    display: inline-block;
+    height: 8px;
+    left: 6px;
+    position: relative;
+    width: 15px; }
+  /* line 87, ../sass/pagination.sass */
   .pagination ul li.disabled a {
     background-color: #eeeeee; }
