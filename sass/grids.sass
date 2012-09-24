@@ -1,0 +1,115 @@
+@import "compass/utilities/text/ellipsis"
+
+.app-grid
+  background: url(../images/bg-app-grid.png) repeat-x 0 100%
+  border-top: 1px solid #E5E5E5
+  margin: 1em 0
+  overflow: hidden
+  width: 100%
+
+  &.app-grid-js
+    li
+      cursor: pointer
+      +transition(background-color 1s)
+
+      &:hover
+        background: #F2F2F2
+        +transition(background-color 0.3s)
+
+  li
+    border: 1px solid #E5E5E5
+    border-width: 0 1px 1px 0
+    +box-sizing(border-box)
+    display: block
+    float: left
+    height: 127px
+    overflow: hidden
+    padding: 22px 20px 22px 114px
+    position: relative
+    width: 33.3%
+
+    &:nth-child(3n)
+      border-right: none
+
+    h2
+      font: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif
+
+      a
+        color: #000
+
+    p.desc
+      height: 25px
+      line-height: 25px
+      margin-bottom: 0.25em
+      +ellipsis
+      width: 100%
+
+    img
+      height: 73px
+      left: 22px
+      position: absolute
+      top: 22px
+      width: 73px
+
+    .open-app a
+      +filter-gradient(#FFF, #E7E7E7)
+      background: #FFF
+      +background(linear-gradient(top, rgba(255, 255, 255, 0.1), rgba(170, 170, 170, 0.3)), #FFF)
+      background-size: 100% 100%
+      border: 1px solid #D3D3D3
+      +border-radius(3px)
+      color: #666
+      display: inline
+      display: inline-block
+      font-size: 14px
+      height: 14px
+      line-height: 14px
+      overflow: hidden
+      padding: 5px 8px
+      position: relative
+      +single-transition(background-color, 0.2s)
+      zoom: 1
+
+      &:hover
+        +filter-gradient(#F3F3F3, #F3F3F3)
+        background-color: #F3F3F3
+        background-position: 0 0
+        +single-transition(background-color, 0.2s)
+
+      &::after
+        background: url(../images/bg-pagination-next.png)
+        content: ''
+        display: inline
+        display: inline-block
+        height: 8px
+        left: 6px
+        position: relative
+        width: 15px
+
+@media (min-width: 1300px)
+  .apps-grid
+    li
+      width: 25%
+
+      &:nth-child(3n)
+        border-right: 1px solid #E5E5E5
+
+      &:nth-child(4n)
+        border-right: none
+
+@media (max-width: 1000px)
+  .apps-grid
+    li
+      width: 50%
+
+      &:nth-child(3n)
+        border-right: 1px solid #E5E5E5
+
+      &:nth-child(2n)
+        border-right: none
+
+@media (max-width: 560px)
+  .apps-grid
+    li
+      border-right: none !important
+      width: 100%

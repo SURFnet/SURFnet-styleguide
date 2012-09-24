@@ -1,9 +1,11 @@
 .header
   background: #FFF url(../images/bg-header.png) no-repeat 50% 100%
-  height: 36px
-  min-height: 0
-  overflow: hidden
+  +box-sizing(border-box)
+  clear: both
+  float: left
+  min-height: 74px
   padding: 19px 17px 19px 37px
+  width: 100%
 
   a
     height: auto
@@ -73,3 +75,73 @@
 
     .logout:before
       content: '\f045'
+
+    .networks
+      position: relative
+      width: 200px
+
+      ul
+        +filter-gradient(#EEE, #DDD)
+        background: #EEE
+        +background(linear-gradient(top, #EEE, #DDD), #FFF)
+        border: 1px solid #DDD
+        +border-radius(4px)
+        left: 20px
+        position: absolute
+        top: -4px
+        right: 20px
+        z-index: 20000
+
+        li
+          border-left: none
+          display: none
+          float: none
+          height: auto
+          line-height: 26px
+          padding: 2px
+          margin-bottom: 0
+          width: auto
+
+          a
+            display: block
+            padding: 5px 20px 6px 35px
+
+          &.active
+            display: block
+
+            a
+              color: #52B2D2
+
+          &.level-user a
+            background: url(../images/icons-users.png) no-repeat 2px -72px
+
+          &.level-admin a
+            background: url(../images/icons-users.png) no-repeat 2px 2px
+
+        &:hover
+
+          li
+            display: block
+
+@media (max-width: 767px)
+  .header
+    float: none
+    margin: 0 -20px
+    overflow: hidden
+    width: auto
+
+    nav
+      width: 100%
+
+      li
+        border-left: none
+        float: none
+        height: auto
+        padding: 5px 0
+
+      .networks
+        ul
+          position: static
+
+          li
+            display: block

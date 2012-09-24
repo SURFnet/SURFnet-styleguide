@@ -1,5 +1,0 @@
-init = ->
-  $('select').dropkick()
-
-
-$ init
