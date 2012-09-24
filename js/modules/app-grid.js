@@ -13,6 +13,7 @@ app.appgrid = function() {
         gridElm.addClass('app-grid-js');
 
         setHover();
+        setSearch();
     };
 
 
@@ -31,6 +32,57 @@ app.appgrid = function() {
 
             location.href = link.attr('href');
         });
+    };
+
+
+    var setSearch = function() {
+        gridElm.before('<input type="search" class="app-grid-search">');
+
+        var searchElm = $('.app-grid-search'),
+            timer = null;
+
+        function setTimer() {
+            if (timer) {
+                clearTimeout(timer);
+            }
+            timer = setTimeout(doSearch, 100);
+        }
+
+        function doSearch() {
+            var isSearch = searchElm.val().length !== 0,
+                keywords = [];
+
+            if (isSearch) {
+                keywords = searchElm.val().toLowerCase().split(' ');
+            }
+
+            gridElm.find('li').each(function(index, elm) {
+                var $elm = $(elm),
+                    display = true,
+                    text = elm.textContent.toLowerCase() || elm.innerText.toLowerCase();
+
+                $.each(keywords, function(i, kw) {
+                    if (display === false) {
+                        return;
+                    }
+
+                    display = false;
+
+                    if (text.indexOf(kw) !== -1) {
+                        display = true;
+                    }
+                });
+
+                if (display) {
+                    $elm.removeClass('hide');
+                }
+                else {
+                    $elm.addClass('hide');
+                }
+            });
+        }
+
+        searchElm.bind('keyup change', setTimer);
     };
 
 

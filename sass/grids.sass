@@ -8,6 +8,8 @@
   width: 100%
 
   &.app-grid-js
+    margin-top: 3em
+
     li
       cursor: pointer
       +transition(background-color 1s)
@@ -30,6 +32,9 @@
 
     &:nth-child(3n)
       border-right: none
+
+    &.hide
+      display: none
 
     h2
       font: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif
@@ -67,16 +72,21 @@
       overflow: hidden
       padding: 5px 8px
       position: relative
-      +single-transition(background-color, 0.2s)
+      +transition(none)
       zoom: 1
 
       &:hover
-        +filter-gradient(#F3F3F3, #F3F3F3)
-        background-color: #F3F3F3
-        background-position: 0 0
-        +single-transition(background-color, 0.2s)
+        +filter-gradient(#EC9900, #DD9000)
+        background: #EF9900
+        +background(linear-gradient(top, rgba(239, 153, 0, 0), rgba(155, 100, 3, 0.2)), #EF9900)
+        border-color: #CB9A40 #B66600 #B55E00 #B66600
+        color: #FFF
+        text-decoration: none
 
-      &::after
+        &:after
+          background: url(../images/bg-open-app-hover.png)
+
+      &:after
         background: url(../images/bg-pagination-next.png)
         content: ''
         display: inline
@@ -86,8 +96,20 @@
         position: relative
         width: 15px
 
+input.app-grid-search
+  background: #FFF url(../images/bg-icon-grid-search.png) no-repeat 96% 50%
+  border-radius: 5em
+  float: right
+  padding: 6px 16px
+  position: absolute
+  right: 37px
+  top: 0
+
+  &:focus
+    outline: none
+
 @media (min-width: 1300px)
-  .apps-grid
+  .app-grid
     li
       width: 25%
 
@@ -98,7 +120,7 @@
         border-right: none
 
 @media (max-width: 1000px)
-  .apps-grid
+  .app-grid
     li
       width: 50%
 
@@ -109,7 +131,7 @@
         border-right: none
 
 @media (max-width: 560px)
-  .apps-grid
+  .app-grid
     li
       border-right: none !important
       width: 100%

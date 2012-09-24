@@ -749,18 +749,20 @@ input[type="color"],
   margin: 1em 0;
   overflow: hidden;
   width: 100%; }
-  .app-grid.app-grid-js li {
-    cursor: pointer;
-    -webkit-transition: background-color 1s;
-    -moz-transition: background-color 1s;
-    -o-transition: background-color 1s;
-    transition: background-color 1s; }
-    .app-grid.app-grid-js li:hover {
-      background: #f2f2f2;
-      -webkit-transition: background-color 0.3s;
-      -moz-transition: background-color 0.3s;
-      -o-transition: background-color 0.3s;
-      transition: background-color 0.3s; }
+  .app-grid.app-grid-js {
+    margin-top: 3em; }
+    .app-grid.app-grid-js li {
+      cursor: pointer;
+      -webkit-transition: background-color 1s;
+      -moz-transition: background-color 1s;
+      -o-transition: background-color 1s;
+      transition: background-color 1s; }
+      .app-grid.app-grid-js li:hover {
+        background: #f2f2f2;
+        -webkit-transition: background-color 0.3s;
+        -moz-transition: background-color 0.3s;
+        -o-transition: background-color 0.3s;
+        transition: background-color 0.3s; }
   .app-grid li {
     border: 1px solid #e5e5e5;
     border-width: 0 1px 1px 0;
@@ -776,6 +778,8 @@ input[type="color"],
     width: 33.3%; }
     .app-grid li:nth-child(3n) {
       border-right: none; }
+    .app-grid li.hide {
+      display: none; }
     .app-grid li h2 {
       font: 14px "Helvetica Neue", Helvetica, Arial, sans-serif; }
       .app-grid li h2 a {
@@ -821,21 +825,26 @@ input[type="color"],
       overflow: hidden;
       padding: 5px 8px;
       position: relative;
-      -webkit-transition: background-color 0.2s;
-      -moz-transition: background-color 0.2s;
-      -o-transition: background-color 0.2s;
-      transition: background-color 0.2s;
+      -webkit-transition: none;
+      -moz-transition: none;
+      -o-transition: none;
+      transition: none;
       zoom: 1; }
       .app-grid li .open-app a:hover {
         *zoom: 1;
-        filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFF3F3F3', endColorstr='#FFF3F3F3');
-        background-color: #f3f3f3;
-        background-position: 0 0;
-        -webkit-transition: background-color 0.2s;
-        -moz-transition: background-color 0.2s;
-        -o-transition: background-color 0.2s;
-        transition: background-color 0.2s; }
-      .app-grid li .open-app a::after {
+        filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFEC9900', endColorstr='#FFDD9000');
+        background: #ef9900;
+        background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(239, 153, 0, 0)), color-stop(100%, rgba(155, 100, 3, 0.2))), #ef9900;
+        background: -webkit-linear-gradient(top, rgba(239, 153, 0, 0), rgba(155, 100, 3, 0.2)), #ef9900;
+        background: -moz-linear-gradient(top, rgba(239, 153, 0, 0), rgba(155, 100, 3, 0.2)), #ef9900;
+        background: -o-linear-gradient(top, rgba(239, 153, 0, 0), rgba(155, 100, 3, 0.2)), #ef9900;
+        background: linear-gradient(top, rgba(239, 153, 0, 0), rgba(155, 100, 3, 0.2)), #ef9900;
+        border-color: #cb9a40 #b66600 #b55e00 #b66600;
+        color: white;
+        text-decoration: none; }
+        .app-grid li .open-app a:hover:after {
+          background: url(../images/bg-open-app-hover.png); }
+      .app-grid li .open-app a:after {
         background: url(../images/bg-pagination-next.png);
         content: "";
         display: inline;
@@ -845,21 +854,32 @@ input[type="color"],
         position: relative;
         width: 15px; }
 
+input.app-grid-search {
+  background: white url(../images/bg-icon-grid-search.png) no-repeat 96% 50%;
+  border-radius: 5em;
+  float: right;
+  padding: 6px 16px;
+  position: absolute;
+  right: 37px;
+  top: 0; }
+  input.app-grid-search:focus {
+    outline: none; }
+
 @media (min-width: 1300px) {
-  .apps-grid li {
+  .app-grid li {
     width: 25%; }
-    .apps-grid li:nth-child(3n) {
+    .app-grid li:nth-child(3n) {
       border-right: 1px solid #e5e5e5; }
-    .apps-grid li:nth-child(4n) {
+    .app-grid li:nth-child(4n) {
       border-right: none; } }
 @media (max-width: 1000px) {
-  .apps-grid li {
+  .app-grid li {
     width: 50%; }
-    .apps-grid li:nth-child(3n) {
+    .app-grid li:nth-child(3n) {
       border-right: 1px solid #e5e5e5; }
-    .apps-grid li:nth-child(2n) {
+    .app-grid li:nth-child(2n) {
       border-right: none; } }
 @media (max-width: 560px) {
-  .apps-grid li {
+  .app-grid li {
     border-right: none !important;
     width: 100%; } }
