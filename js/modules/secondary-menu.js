@@ -44,7 +44,7 @@ app.secondarymenu = function() {
 
         e.preventDefault();
 
-        if (animating) {
+        if (animating || $('body.condensed').length !== 0) {
             return;
         }
 

@@ -76,6 +76,7 @@ input[type="color"],
   padding: 8px 13px 9px
   position: relative !important
   +transition(background-color 0.2s, color 0.2s)
+  vertical-align: top
   zoom: 1
 
   &:hover,
@@ -117,16 +118,8 @@ input[type="color"],
     +transition(background-color 0.2s, color 0.2s)
 
 .btn-group
-  +border-radius(0)
-  margin-left: -9px !important
-  margin-right: 0 !important
-
-  &.btn-group-first
-    +border-left-radius(3px)
-    margin-left: 7px !important
-
-  &.btn-group-last
-    +border-right-radius(3px)
+  display: inline-block
+  margin-left: 7px
 
 .btn-small
   font-size: 14px
