@@ -743,6 +743,9 @@ input[type="color"],
   .modal-header h3 {
     color: white; }
 
+.app-grid-holder {
+  position: relative; }
+
 .app-grid {
   background: url(../images/bg-app-grid.png) repeat-x 0 100%;
   border-top: 1px solid #e5e5e5;
@@ -864,6 +867,12 @@ input.app-grid-search {
   top: 0; }
   input.app-grid-search:focus {
     outline: none; }
+  input.app-grid-search::-webkit-input-placeholder {
+    color: #cacaca; }
+  input.app-grid-search:-moz-placeholder {
+    color: #cacaca; }
+  input.app-grid-search:-ms-input-placeholder {
+    color: #cacaca; }
 
 @media (min-width: 1300px) {
   .app-grid li {

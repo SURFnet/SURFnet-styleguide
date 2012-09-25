@@ -36,7 +36,9 @@ app.appgrid = function() {
 
 
     var setSearch = function() {
-        gridElm.before('<input type="search" class="app-grid-search">');
+        var placeholder = gridElm.data('searchPlaceholder');
+
+        gridElm.before('<input type="search" class="app-grid-search" placeholder="' + placeholder + '">');
 
         var searchElm = $('.app-grid-search'),
             timer = null;
