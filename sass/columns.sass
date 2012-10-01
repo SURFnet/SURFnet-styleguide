@@ -1,0 +1,46 @@
+.has-left-right
+  overflow: hidden
+  width: 100%
+
+  > div
+    +box-sizing(border-box)
+
+  .column-left
+    float: left
+    padding: 25px 37px 0 37px
+    width: 210px
+
+  .column-center
+    border: 1px solid #E5E5E5
+    border-width: 0 1px
+    margin: 0 275px 0 235px
+    padding: 25px
+
+  .column-right
+    float: right
+    padding-top: 25px
+    width: 250px
+
+  &.narrow
+    .column-center
+      border-right: none
+      margin-right: 0
+
+    .column-right
+      border-top: none
+      float: none
+      margin: 0
+      padding: 2em 37px
+      width: 100%
+
+      > section
+        border-top: 1px solid #E5E5E5
+        padding-top: 2em
+
+  .condensed &
+    margin: 0
+
+    .column-center
+      border-left: none
+      margin-left: 0
+      padding: 37px

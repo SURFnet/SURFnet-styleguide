@@ -11,6 +11,7 @@ app.table = function(){
     var initEventHandlers = function() {
 
         initRowDetails();
+        initDataTable();
 
     };
 
@@ -49,6 +50,21 @@ app.table = function(){
             }
 
             row.toggleClass('expanded');
+        });
+    };
+
+
+    var initDataTable = function() {
+        $('.table-sortable').each(function(index, table) {
+            $(table).dataTable({
+                bPaginate: false,
+                bLengthChange: false,
+                bAutoWidth: false,
+                bInfo: false,
+                oLanguage: {
+                    sSearch: '_INPUT_'
+                }
+            });
         });
     };
 

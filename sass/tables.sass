@@ -1,3 +1,6 @@
+.data-table-holder
+  position: relative
+
 .table,
 .table-bordered,
 .table-striped
@@ -33,5 +36,87 @@
   tr:nth-child(even) td
     background: #F8F8F8 !important
 
+.table-sortable
+  margin-top: 2.25em
+
+  thead .sorting,
+  thead .sorting_asc,
+  thead .sorting_desc
+    cursor: pointer
+
+    &:focus
+      color: #070707
+      outline: none
+      text-decoration: underline
+
+    &:after
+      background: url(../images/bg-toggle-read-more.png) 0 0
+      bottom: 2px
+      content: ''
+      display: inline-block
+      height: 7px
+      margin-left: 10px
+      position: relative
+      vertical-align: middle
+      width: 9px
+
+  thead .sorting_desc:after
+    background-position: 0 -7px
+
+.table-discussion
+  td
+    border-left: 1px solid #E5E5E5
+    +box-sizing(border-box)
+    min-width: 270px
+    padding: 35px 50px
+
+    &:first-child
+      border-left: none
+
+    time
+      color: #666
+
+    label
+      font-family: 'VAG Rundschrift D Light', vagrundschriftdligregular, 'Helvetica Neue', Helvetiva, Arial, sans-serif
+      font-size: 20px
+      font-smooth: always
+      font-weight: normal
+      line-height: 25px
+
+    textarea
+      +box-sizing(border-box)
+      font-size: 1em
+      height: 10em
+      resize: vertical
+      width: 100%
+
 .dataTables_empty
   font-style: italic
+
+.dataTables_filter
+  position: absolute
+  right: 0
+  top: 0
+
+.table-with-statuses
+  .new,
+  .in-progress,
+  .handled,
+  .denied
+    &:before
+      background: url(../images/sprite-icons-statuses.png)
+      content: ''
+      display: inline-block
+      height: 18px
+      margin-right: 8px
+      vertical-align: middle
+      width: 23px
+
+  .denied:before
+    background-position: 0 -18px
+
+  .handled:before
+    background-position: 0 -36px
+
+  .in-progress:before
+    background-position: 0 -54px

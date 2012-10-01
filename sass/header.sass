@@ -3,6 +3,7 @@
   +box-sizing(border-box)
   clear: both
   float: left
+  margin-bottom: 0
   min-height: 0
   padding: 19px 17px 19px 37px
   width: 100%
@@ -90,7 +91,7 @@
         position: absolute
         top: -4px
         right: 20px
-        z-index: 20000
+        z-index: 198
 
         li
           border-left: none
@@ -118,7 +119,8 @@
           &.level-admin a
             background: url(../images/icons-users.png) no-repeat 2px 2px
 
-        &:hover
+        &:hover,
+        &.opened
           li
             display: block
 
@@ -155,7 +157,7 @@
 @media (max-width: 767px)
   .header
     float: none
-    margin: 0 -20px
+    margin: 0
     overflow: hidden
     width: auto
 

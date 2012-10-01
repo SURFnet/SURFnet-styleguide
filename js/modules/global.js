@@ -12,6 +12,7 @@ app.global = function() {
 
         initUserSelection();
         initTextSearch();
+        initReadMore();
     };
 
     var initPlugins = function() {
@@ -52,6 +53,33 @@ app.global = function() {
             }
         });
     }
+
+
+    var initReadMore = function() {
+        $('.with-read-more').each(function(index, elm) {
+            elm = $(elm);
+
+            var linkText = elm.data('readMoreText');
+
+            elm.append('<a class="toggle-read-more" href="#">' + linkText + '</a>');
+            elm.addClass('folded');
+        });
+
+        readMoreElms.on('click', '.toggle-read-more', function(e) {
+            e.preventDefault();
+
+            var elm = $(this),
+                wrapper = elm.closest('.with-read-more').toggleClass('folded');
+
+            if (wrapper.hasClass('folded')) {
+                elm.html(wrapper.data('readMoreText'));
+            }
+            else {
+                elm.html(wrapper.data('readLessText'));
+            }
+        });
+    }
+
 
     function search (event) {
         var searchButton = $('#sb_id');
