@@ -5,14 +5,12 @@
 
 .app-grid
   background: url(../images/bg-app-grid.png) repeat-x 0 100%
-  border-top: 1px solid #E5E5E5
-  margin: 1em 0
+  border-top: 1px solid $subtle_gray
+  margin: 1.5em 0
   overflow: hidden
   width: 100%
 
   &.app-grid-js
-    margin-top: 3em
-
     li
       cursor: pointer
       +transition(background-color 1s)
@@ -22,7 +20,7 @@
         +transition(background-color 0.3s)
 
   li
-    border: 1px solid #E5E5E5
+    border: 1px solid $subtle_gray
     border-width: 0 1px 1px 0
     +box-sizing(border-box)
     display: block
@@ -40,10 +38,16 @@
       display: none
 
     h2
-      font: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif
+      font: bold 14px 'Helvetica Neue', Helvetica, Arial, sans-serif
 
       a
         color: #000
+        +transition(none)
+
+        &:hover,
+        &:focus
+          color: $main_blue
+          +transition(none)
 
     p.desc
       height: 25px
@@ -69,12 +73,14 @@
       color: #666
       display: inline
       display: inline-block
-      font-size: 14px
+      font-size: 11px
+      font-weight: bold
       height: 14px
       line-height: 14px
       overflow: hidden
-      padding: 5px 8px
+      padding: 4px 6px
       position: relative
+      text-transform: uppercase
       +transition(none)
       zoom: 1
 
@@ -86,11 +92,8 @@
         color: #FFF
         text-decoration: none
 
-        &:after
-          background: url(../images/bg-open-app-hover.png)
-
       &:after
-        background: url(../images/bg-pagination-next.png)
+        background: url(../images/bg-open-app.png)
         content: ''
         display: inline
         display: inline-block
@@ -102,11 +105,11 @@
 input.app-grid-search
   background: #FFF url(../images/bg-icon-grid-search.png) no-repeat 96% 50%
   border-radius: 5em
-  float: right
+  height: auto
   padding: 6px 16px
   position: absolute
-  right: 37px
-  top: 0
+  right: 50px
+  top: 50px
 
   &:focus
     outline: none
@@ -120,13 +123,17 @@ input.app-grid-search
   &:-ms-input-placeholder
     color: #CACACA
 
+  .condensed &
+    right: 25px
+    top: 25px
+
 @media (min-width: 1300px)
   .app-grid
     li
       width: 25%
 
       &:nth-child(3n)
-        border-right: 1px solid #E5E5E5
+        border-right: 1px solid $subtle_gray
 
       &:nth-child(4n)
         border-right: none
@@ -137,7 +144,7 @@ input.app-grid-search
       width: 50%
 
       &:nth-child(3n)
-        border-right: 1px solid #E5E5E5
+        border-right: 1px solid $subtle_gray
 
       &:nth-child(2n)
         border-right: none
@@ -147,3 +154,9 @@ input.app-grid-search
     li
       border-right: none !important
       width: 100%
+
+  input.app-grid-search
+    +box-sizing(border-box)
+    margin: 1em 0
+    position: static
+    width: 100%

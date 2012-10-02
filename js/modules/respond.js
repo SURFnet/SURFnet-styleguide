@@ -16,13 +16,6 @@ app.respond = function() {
 
         menuSizeWatcher.breakpoint(0, 767, {
             className: 'condensed',
-            move: [
-                {
-                    selector: 'nav.secondary-menu',
-                    to: '.menu-respond-holder',
-                    after: '.primary-navigation'
-                }
-            ],
             enter: function() {
                 $('.header').append('<a href="#" class="menu-trigger">Menu</a>').find('.menu-trigger').click(openMenu);
                 $('.menu-respond-holder').stop().slideUp(0);
@@ -31,15 +24,6 @@ app.respond = function() {
                 $('.header .menu-trigger').remove();
                 $('.menu-respond-holder').stop().slideDown(0);
             }
-        });
-
-        menuSizeWatcher.breakpoint(767, Infinity, {
-            move: [
-                {
-                    selector: 'nav.secondary-menu',
-                    to: '.menu-holder'
-                }
-            ]
         });
 
 

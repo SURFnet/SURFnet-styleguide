@@ -10,6 +10,7 @@ app.secondarymenu = function() {
         }
         bindEvents();
         foldInactive();
+        setSticky();
     };
 
 
@@ -63,6 +64,26 @@ app.secondarymenu = function() {
                 animating = false;
             });
         }
+    };
+
+
+    var setSticky = function() {
+        var originalOffset = menuElm.offset().top;
+
+        var setPosition = function() {
+            var body = $('body'),
+                scrollTop = body.scrollTop(),
+                headerHeight = $('.header').outerHeight();
+
+            if ((body.hasClass('condensed') && scrollTop > headerHeight) || scrollTop > originalOffset) {
+                menuElm.addClass('sticky');
+            }
+            else {
+                menuElm.removeClass('sticky');
+            }
+        };
+
+        $(window).on('scroll', setPosition);
     };
 
 
