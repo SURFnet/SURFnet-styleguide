@@ -77,53 +77,6 @@
     .logout:before
       content: '\f045'
 
-    .networks
-      position: relative
-      width: 200px
-
-      ul
-        +filter-gradient(#EEE, #DDD)
-        background: #EEE
-        +background(linear-gradient(top, #EEE, #DDD), #FFF)
-        border: 1px solid #DDD
-        +border-radius(4px)
-        left: 20px
-        position: absolute
-        top: -4px
-        right: 20px
-        z-index: 198
-
-        li
-          border-left: none
-          display: none
-          float: none
-          height: auto
-          line-height: 26px
-          padding: 2px
-          margin-bottom: 0
-          width: auto
-
-          a
-            display: block
-            padding: 5px 20px 6px 35px
-
-          &.active
-            display: block
-
-            a
-              color: #52B2D2
-
-          &.level-user a
-            background: url(../images/icons-users.png) no-repeat 2px -72px
-
-          &.level-admin a
-            background: url(../images/icons-users.png) no-repeat 2px 2px
-
-        &:hover,
-        &.opened
-          li
-            display: block
-
   .condensed &
     .menu-trigger
       +filter-gradient(#6DC5E1, #56A3B7)
@@ -169,10 +122,3 @@
         float: none
         height: auto
         padding: 5px 0
-
-      .networks
-        ul
-          position: static
-
-          li
-            display: block

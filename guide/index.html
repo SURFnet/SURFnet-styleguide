@@ -44,26 +44,27 @@
             <nav class="primary-navigation">
                 <ul>
                     <li class="user">Welcome <a href="#">Peter Jones</a></li>
-                    <li class="networks">
-                        <ul>
-                            <li class="level-user active">
-                                <a href="#">SURFnet</a>
-                            </li>
-                            <li class="level-admin">
-                                <a href="#">SURFGuest TEST</a>
-                            </li>
-                            <li class="level-user">
-                                <a href="#">SURFGuest</a>
-                            </li>
-                        </ul>
+                    <li class="foobar">
+                        <div class="btn-group">
+                            <a class="btn btn-small active" href="#">User</a>
+                            <a class="btn btn-small" href="#">Admin</a>
+                        </div>
                     </li>
                     <li class="logout"><a href="#">Logout</a></li>
                 </ul>
             </nav>
         </header>
 
-        <div class="wrapper row-fluid">
-            <div class="span3 menu-holder">
+        <nav class="foomenu">
+            <ul>
+                <li><a>Applicaties</a></li>
+                <li><a>Verzoeken</a></li>
+                <li><a>Profiel</a></li>
+            </ul>
+        </nav>
+
+        <div class="wrapper has-left">
+            <div class="column-left menu-holder">
                 <nav class="secondary-menu">
                     <ul>
                         <li class="apps active"><a href="#">Applicaties</a>
@@ -90,7 +91,9 @@
                 </nav>
             </div>
 
-            <div class="span9 content-holder">
+            <div class="column-center content-holder">
+                <h1>Styleguide</h1>
+                
                 <section>
 
                     <h2>Buttons</h2>

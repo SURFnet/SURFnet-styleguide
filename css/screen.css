@@ -317,44 +317,58 @@ footer {
 
   .action-list {
     margin-right: 0; } }
-.has-left-right {
+.has-left-right,
+.has-left {
   overflow: hidden;
   width: 100%; }
-  .has-left-right > div {
+  .has-left-right > div,
+  .has-left > div {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box; }
-  .has-left-right .column-left {
+  .has-left-right .column-left,
+  .has-left .column-left {
     float: left;
     padding: 25px 37px 0 37px;
     width: 210px; }
-  .has-left-right .column-center {
+  .has-left-right .column-center,
+  .has-left .column-center {
     border: 1px solid #e5e5e5;
     border-width: 0 1px;
     margin: 0 275px 0 235px;
     padding: 25px; }
-  .has-left-right .column-right {
+  .has-left-right .column-right,
+  .has-left .column-right {
     float: right;
     padding-top: 25px;
     width: 250px; }
-  .has-left-right.narrow .column-center {
+  .has-left-right.narrow .column-center,
+  .has-left.narrow .column-center {
     border-right: none;
     margin-right: 0; }
-  .has-left-right.narrow .column-right {
+  .has-left-right.narrow .column-right,
+  .has-left.narrow .column-right {
     border-top: none;
     float: none;
     margin: 0;
     padding: 2em 37px;
     width: 100%; }
-    .has-left-right.narrow .column-right > section {
+    .has-left-right.narrow .column-right > section,
+    .has-left.narrow .column-right > section {
       border-top: 1px solid #e5e5e5;
       padding-top: 2em; }
-  .condensed .has-left-right {
+  .condensed .has-left-right, .condensed
+  .has-left {
     margin: 0; }
-    .condensed .has-left-right .column-center {
+    .condensed .has-left-right .column-center, .condensed
+    .has-left .column-center {
       border-left: none;
       margin-left: 0;
       padding: 37px; }
+
+.has-left .column-center {
+  border-right: none;
+  margin-right: 0; }
 
 .form {
   background: #f8f8f8;
@@ -596,51 +610,6 @@ input[type="color"],
       content: "\f013"; }
     .header nav .logout:before {
       content: "\f045"; }
-    .header nav .networks {
-      position: relative;
-      width: 200px; }
-      .header nav .networks ul {
-        *zoom: 1;
-        filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFEEEEEE', endColorstr='#FFDDDDDD');
-        background: #eeeeee;
-        background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #eeeeee), color-stop(100%, #dddddd)), white;
-        background: -webkit-linear-gradient(top, #eeeeee, #dddddd), white;
-        background: -moz-linear-gradient(top, #eeeeee, #dddddd), white;
-        background: -o-linear-gradient(top, #eeeeee, #dddddd), white;
-        background: linear-gradient(top, #eeeeee, #dddddd), white;
-        border: 1px solid #dddddd;
-        -webkit-border-radius: 4px;
-        -moz-border-radius: 4px;
-        -ms-border-radius: 4px;
-        -o-border-radius: 4px;
-        border-radius: 4px;
-        left: 20px;
-        position: absolute;
-        top: -4px;
-        right: 20px;
-        z-index: 198; }
-        .header nav .networks ul li {
-          border-left: none;
-          display: none;
-          float: none;
-          height: auto;
-          line-height: 26px;
-          padding: 2px;
-          margin-bottom: 0;
-          width: auto; }
-          .header nav .networks ul li a {
-            display: block;
-            padding: 5px 20px 6px 35px; }
-          .header nav .networks ul li.active {
-            display: block; }
-            .header nav .networks ul li.active a {
-              color: #52b2d2; }
-          .header nav .networks ul li.level-user a {
-            background: url(../images/icons-users.png) no-repeat 2px -72px; }
-          .header nav .networks ul li.level-admin a {
-            background: url(../images/icons-users.png) no-repeat 2px 2px; }
-        .header nav .networks ul:hover li, .header nav .networks ul.opened li {
-          display: block; }
   .condensed .header .menu-trigger {
     *zoom: 1;
     filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FF6DC5E1', endColorstr='#FF56A3B7');
@@ -696,11 +665,7 @@ input[type="color"],
         border-left: none;
         float: none;
         height: auto;
-        padding: 5px 0; }
-      .header nav .networks ul {
-        position: static; }
-        .header nav .networks ul li {
-          display: block; } }
+        padding: 5px 0; } }
 .secondary-menu {
   margin: 0;
   width: 100%; }
@@ -789,6 +754,17 @@ input[type="color"],
   .secondary-menu {
     margin-bottom: 3em;
     margin-left: 17px !important; } }
+.foomenu ul {
+  list-style: none;
+  margin: 0; }
+.foomenu li {
+  float: left; }
+  .foomenu li:first-child {
+    margin-left: 22px; }
+  .foomenu li a {
+    display: block;
+    padding: 15px; }
+
 .data-table-holder {
   position: relative; }
 

@@ -56,7 +56,7 @@ app.global = function() {
 
 
     var initReadMore = function() {
-        $('.with-read-more').each(function(index, elm) {
+        var readMoreElms = $('.with-read-more').each(function(index, elm) {
             elm = $(elm);
 
             var linkText = elm.data('readMoreText');
