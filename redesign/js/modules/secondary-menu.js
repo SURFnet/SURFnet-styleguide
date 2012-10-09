@@ -72,10 +72,9 @@ app.secondarymenu = function() {
 
         var setPosition = function() {
             var body = $('body'),
-                scrollTop = body.scrollTop(),
-                headerHeight = $('.header').outerHeight();
+                scrollTop = body.scrollTop();
 
-            if ((body.hasClass('condensed') && scrollTop > headerHeight) || scrollTop > originalOffset) {
+            if (!body.hasClass('condensed') && scrollTop > originalOffset) {
                 menuElm.addClass('sticky');
             }
             else {
