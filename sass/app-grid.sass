@@ -29,7 +29,7 @@
     overflow: hidden
     padding: 22px 20px 22px 114px
     position: relative
-    width: 33.3%
+    width: 33%
 
     &:nth-child(3n)
       border-right: none
@@ -127,6 +127,7 @@ input.app-grid-search
     right: 25px
     top: 25px
 
+
 @media (min-width: 1300px)
   .app-grid
     li
@@ -137,6 +138,7 @@ input.app-grid-search
 
       &:nth-child(4n)
         border-right: none
+
 
 @media (max-width: 1000px)
   .app-grid
@@ -149,14 +151,17 @@ input.app-grid-search
       &:nth-child(2n)
         border-right: none
 
+
+@media (max-width: 767px)
+  input.app-grid-search
+    +box-sizing(border-box)
+    margin: 0
+    position: static
+    width: 100%
+
+
 @media (max-width: 560px)
   .app-grid
     li
       border-right: none !important
       width: 100%
-
-  input.app-grid-search
-    +box-sizing(border-box)
-    margin: 1em 0
-    position: static
-    width: 100%
