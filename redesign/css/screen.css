@@ -442,7 +442,10 @@ footer {
   font-weight: bold;
   margin-left: 0;
   text-align: left;
-  width: 186px; }
+  width: 33%; }
+
+.form-horizontal .controls {
+  margin-left: 36%; }
 
 fieldset {
   border-top: 1px solid #e5e5e5;
@@ -619,6 +622,12 @@ textarea {
   .actions .btn + a {
     margin-left: 0; }
 
+@media (max-width: 480px) {
+  .form-horizontal .control-label {
+    width: 100%; }
+
+  .form-horizontal .controls {
+    margin-left: 0; } }
 .header {
   background: white url(../images/bg-header.png) no-repeat 50% 100%;
   -webkit-box-sizing: border-box;
