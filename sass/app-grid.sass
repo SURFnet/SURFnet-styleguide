@@ -6,7 +6,7 @@
 .app-grid
   background: url(../images/bg-app-grid.png) repeat-x 0 100%
   border-top: 1px solid $subtle_gray
-  margin: 1.5em 0
+  margin: 25px 0
   overflow: hidden
   width: 100%
 
@@ -153,9 +153,21 @@ input.app-grid-search
 
 
 @media (max-width: 767px)
+  .app-grid-holder
+    margin: -1px 0 !important
+    padding: 0 !important
+
+    section
+      margin-bottom: 0
+      padding: 0 25px
+
+  .app-grid
+    margin: 0 -25px 25px
+    width: auto
+
   input.app-grid-search
     +box-sizing(border-box)
-    margin: 0
+    margin: 10px 0
     position: static
     width: 100%
 

@@ -178,7 +178,9 @@
     position: static
     width: 100%
 
-  .table-two-columns
+
+@media (max-width: 600px)
+  .table-discussion
     min-width: 0
 
     tr,
@@ -188,7 +190,30 @@
 
     td,
     th
-      padding: 10px
+      padding: 10px 0
+
+      &:nth-child(even)
+        border-bottom: 1px solid $subtle_gray
+
+
+@media (max-width: 767px) and (min-width: 600px)
+  .table-discussion
+    td,
+    th
+      min-width: 200px
+
+@media (max-width: 1000px) and (min-width: 767px)
+  .table-discussion
+    min-width: 0
+
+    tr,
+    td
+      border: none
+      display: block
+
+    td,
+    th
+      padding: 10px 0
 
       &:nth-child(even)
         border-bottom: 1px solid $subtle_gray
