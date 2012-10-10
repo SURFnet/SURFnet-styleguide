@@ -74,7 +74,7 @@ app.secondarymenu = function() {
             var body = $('body'),
                 scrollTop = body.scrollTop();
 
-            if (!body.hasClass('condensed') && scrollTop > originalOffset) {
+            if (!body.hasClass('condensed') && $('.no-sticky-app-grid-wrapper-menu .app-grid-wrapper').length === 0 && scrollTop > originalOffset) {
                 menuElm.addClass('sticky');
             }
             else {

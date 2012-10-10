@@ -6,6 +6,7 @@ app.respond = function() {
 
     var init = function() {
         setSizeWatcher();
+        $('body').on('click', closeMenu);
     };
 
 
@@ -26,7 +27,9 @@ app.respond = function() {
             }
         });
 
-        menuSizeWatcher.trigger();
+        menuSizeWatcher.breakpoint(0, 951, {
+            className: 'no-sticky-app-grid-wrapper-menu'
+        });
 
 
         var columnSizeWatcher = new SizeWatcher('.has-left-right');
@@ -46,6 +49,17 @@ app.respond = function() {
         e.preventDefault();
 
         $('.menu-respond-holder').toggleClass('hide');
+    };
+
+
+    var closeMenu = function(e) {
+        var tgt = $(e.target);
+
+        window.setTimeout(function() {
+            if (tgt.closest('.menu-respond-holder,.menu-trigger').length === 0) {
+                $('.menu-respond-holder').addClass('hide');
+            }
+        }, 50);
     };
 
 
