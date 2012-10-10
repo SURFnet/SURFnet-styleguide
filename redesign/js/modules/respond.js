@@ -18,13 +18,15 @@ app.respond = function() {
             className: 'condensed',
             enter: function() {
                 $('.header').append('<a href="#" class="menu-trigger">Menu</a>').find('.menu-trigger').click(openMenu);
-                $('.menu-respond-holder').stop().slideUp(0);
+                $('.menu-respond-holder').addClass('hide');
             },
             leave: function() {
                 $('.header .menu-trigger').remove();
-                $('.menu-respond-holder').stop().slideDown(0);
+                $('.menu-respond-holder').removeClass('hide');
             }
         });
+
+        menuSizeWatcher.trigger();
 
 
         var columnSizeWatcher = new SizeWatcher('.has-left-right');
@@ -37,13 +39,25 @@ app.respond = function() {
         columnSizeWatcher.breakpoint(950, Infinity, {
             order: ['.column-left', '.column-right', '.column-center']
         });
+
+
+        var twoColumnSizeWatcher = new SizeWatcher('.has-left');
+
+        twoColumnSizeWatcher.breakpoint(0, 767, {
+            className: 'narrow',
+            order: ['.column-center', '.column-left']
+        });
+
+        twoColumnSizeWatcher.breakpoint(767, Infinity, {
+            order: ['.column-left', '.column-center']
+        });
     };
 
 
     var openMenu = function(e) {
         e.preventDefault();
 
-        $('.menu-respond-holder').stop().slideToggle(800);
+        $('.menu-respond-holder').toggleClass('hide');
     };
 
 
