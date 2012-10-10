@@ -1060,19 +1060,36 @@ textarea {
     box-sizing: border-box;
     margin: 0;
     position: static;
-    width: 100%; }
-
-  .table-two-columns {
+    width: 100%; } }
+@media (max-width: 600px) {
+  .table-discussion {
     min-width: 0; }
-    .table-two-columns tr,
-    .table-two-columns td {
+    .table-discussion tr,
+    .table-discussion td {
       border: none;
       display: block; }
-    .table-two-columns td,
-    .table-two-columns th {
-      padding: 10px; }
-      .table-two-columns td:nth-child(even),
-      .table-two-columns th:nth-child(even) {
+    .table-discussion td,
+    .table-discussion th {
+      padding: 10px 0; }
+      .table-discussion td:nth-child(even),
+      .table-discussion th:nth-child(even) {
+        border-bottom: 1px solid #e5e5e5; } }
+@media (max-width: 767px) and (min-width: 600px) {
+  .table-discussion td,
+  .table-discussion th {
+    min-width: 200px; } }
+@media (max-width: 1000px) and (min-width: 767px) {
+  .table-discussion {
+    min-width: 0; }
+    .table-discussion tr,
+    .table-discussion td {
+      border: none;
+      display: block; }
+    .table-discussion td,
+    .table-discussion th {
+      padding: 10px 0; }
+      .table-discussion td:nth-child(even),
+      .table-discussion th:nth-child(even) {
         border-bottom: 1px solid #e5e5e5; } }
 .pagination {
   background: transparent;
@@ -1208,7 +1225,7 @@ textarea {
 .app-grid {
   background: url(../images/bg-app-grid.png) repeat-x 0 100%;
   border-top: 1px solid #e5e5e5;
-  margin: 1.5em 0;
+  margin: 25px 0;
   overflow: hidden;
   width: 100%; }
   .app-grid.app-grid-js li {
@@ -1359,11 +1376,22 @@ input.app-grid-search {
     .app-grid li:nth-child(2n) {
       border-right: none; } }
 @media (max-width: 767px) {
+  .app-grid-holder {
+    margin: -1px 0 !important;
+    padding: 0 !important; }
+    .app-grid-holder section {
+      margin-bottom: 0;
+      padding: 0 25px; }
+
+  .app-grid {
+    margin: 0 -25px 25px;
+    width: auto; }
+
   input.app-grid-search {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    margin: 0;
+    margin: 10px 0;
     position: static;
     width: 100%; } }
 @media (max-width: 560px) {
