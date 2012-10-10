@@ -433,12 +433,20 @@ footer {
     padding: 25px; } }
 .form {
   background: transparent;
-  border: none; }
+  border: none;
+  max-width: 100%;
+  padding-top: 0;
+  width: 600px; }
 
 .form-horizontal .control-label {
-  margin-left: 14px;
+  font-weight: bold;
+  margin-left: 0;
   text-align: left;
   width: 186px; }
+
+fieldset {
+  border-top: 1px solid #e5e5e5;
+  padding: 25px 0; }
 
 select,
 textarea,
@@ -490,6 +498,7 @@ textarea {
   .radio-group label,
   .checkbox-group label {
     display: block;
+    font-weight: normal;
     line-height: 18px;
     padding: 5px 0 0 0; }
     .radio-group label input,
@@ -604,9 +613,11 @@ textarea {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  margin: 0;
-  padding: 14px;
+  margin: 25px 0 0;
+  padding: 15px 0;
   width: 100%; }
+  .actions .btn + a {
+    margin-left: 0; }
 
 .header {
   background: white url(../images/bg-header.png) no-repeat 50% 100%;

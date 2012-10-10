@@ -1,11 +1,19 @@
 .form
   background: transparent
   border: none
+  max-width: 100%
+  padding-top: 0
+  width: 600px
 
 .form-horizontal .control-label
-  margin-left: 14px
+  font-weight: bold
+  margin-left: 0
   text-align: left
   width: 186px
+
+fieldset
+  border-top: 1px solid $subtle_gray
+  padding: 25px 0
 
 select,
 textarea,
@@ -52,6 +60,7 @@ textarea
 
   label
     display: block
+    font-weight: normal
     line-height: 18px
     padding: 5px 0 0 0
 
@@ -134,6 +143,9 @@ textarea
 .actions
   border-top: 1px solid $subtle_gray
   +box-sizing(border-box)
-  margin: 0
-  padding: 14px
+  margin: 25px 0 0
+  padding: 15px 0
   width: 100%
+
+  .btn + a
+    margin-left: 0

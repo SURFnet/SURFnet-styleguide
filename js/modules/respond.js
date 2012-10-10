@@ -28,7 +28,17 @@ app.respond = function() {
         });
 
         menuSizeWatcher.breakpoint(0, 951, {
-            className: 'no-sticky-app-grid-wrapper-menu'
+            enter: function() {
+                if ($('.app-grid-wrapper').length === 1) {
+                    $('body').addClass('no-sticky-app-grid-wrapper-menu');
+                }
+                else {
+                    $('body').removeClass('no-sticky-app-grid-wrapper-menu');
+                }
+            },
+            leave: function() {
+                $('body').removeClass('no-sticky-app-grid-wrapper-menu');
+            }
         });
 
 
@@ -57,7 +67,7 @@ app.respond = function() {
 
         window.setTimeout(function() {
             if (tgt.closest('.menu-respond-holder,.menu-trigger').length === 0) {
-                $('.menu-respond-holder').addClass('hide');
+                $('.condensed .menu-respond-holder').addClass('hide');
             }
         }, 50);
     };
