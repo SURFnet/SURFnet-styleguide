@@ -79,20 +79,25 @@
 
   .condensed &
     .menu-trigger
-      +filter-gradient(#6DC5E1, #56A3B7)
+      +filter-gradient(#68C6DE, #53B3D3)
       background: #68C6DE
-      +background(linear-gradient(top, rgba(104, 198, 222, 0), rgba(86,163,183, 0.75)), #68C6DE)
-      border-color: #7DB4C1 #4D97AB #408AA3 #4D97AB
+      +background(linear-gradient(top, #68C6DE, #53B3D3), #68C6DE)
+      border: 1px solid #4690A6
+      border-color: #7DB4C1 #79B0BF #4690A6 #79B0BF
       +border-radius(3px)
+      box-shadow: rgba(255, 255, 255, 0.2) 0px 1px 0px 0px inset, rgba(0, 0, 0, 0.0470588) 0px 1px 2px 0px
       color: #FFF
       font-size: 16px
+      height: 19px
       margin-left: 7px
       overflow: hidden
       padding: 8px 13px 9px
       position: absolute !important
-      right: 19px
+      right: 25px
+      text-indent: -9999em
       top: 17px
       +transition(background-color 0.2s, color 0.2s)
+      width: 39px
       zoom: 1
 
       &:hover
@@ -101,19 +106,59 @@
         color: #FFF
         +transition(background-color 0.2s, color 0.2s)
 
+      &:before
+        background: url(../images/user-dropdown.png)
+        content: ''
+        height: 19px
+        left: 13px
+        position: absolute
+        top: 8px
+        width: 39px
+
     .menu-respond-holder
-      margin: 0
-      overflow: hidden
-      padding: 1em 0 0
-      width: 100%
+      background: #FFF
+      border: 1px solid $subtle_gray
+      +border-radius(4px)
+      box-shadow: 1px 1px 0 rgba(7, 7, 7, 0.15)
+      position: absolute
+      right: 25px
+      top: 65px
+      width: 200px
+      z-index: 99
+
+      &:before
+        border-bottom: 10px solid $subtle_gray
+        border-left: 7px solid transparent
+        border-right: 7px solid transparent
+        content: ''
+        height: 0
+        position: absolute
+        right: 10px
+        top: -10px
+        width: 0
+
+      &:after
+        border-bottom: 7px solid #FFF
+        border-left: 5px solid transparent
+        border-right: 5px solid transparent
+        content: ''
+        height: 0
+        position: absolute
+        right: 12px
+        top: -7px
+        width: 0
+
+      li
+        border-bottom: 1px solid $subtle_gray
+        height: 26px
+        padding: 15px
 
 @media (max-width: 767px)
   .header
-    float: none
+    float: left
     margin: 0
-    overflow: hidden
     padding: 19px 5px 19px 25px
-    width: auto
+    width: 100%
 
     nav
       width: 100%
