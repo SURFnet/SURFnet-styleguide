@@ -179,7 +179,7 @@
     width: 100%
 
 
-@media (max-width: 600px)
+@media (max-width: 600px), (max-width: 1000px) and (min-width: 767px)
   .table-discussion
     min-width: 0
 
@@ -190,10 +190,14 @@
 
     td,
     th
+      background: transparent !important
       padding: 10px 0
 
       &:nth-child(even)
         border-bottom: 1px solid $subtle_gray
+
+  .table-discussion.table-striped tbody tr:nth-child(even) td
+    background: transparent !important
 
 
 @media (max-width: 767px) and (min-width: 600px)
@@ -201,19 +205,3 @@
     td,
     th
       min-width: 200px
-
-@media (max-width: 1000px) and (min-width: 767px)
-  .table-discussion
-    min-width: 0
-
-    tr,
-    td
-      border: none
-      display: block
-
-    td,
-    th
-      padding: 10px 0
-
-      &:nth-child(even)
-        border-bottom: 1px solid $subtle_gray

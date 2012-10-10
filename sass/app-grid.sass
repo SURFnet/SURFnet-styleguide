@@ -140,7 +140,7 @@ input.app-grid-search
         border-right: none
 
 
-@media (max-width: 1000px)
+@media (max-width: 1200px)
   .app-grid
     li
       width: 50%
@@ -152,7 +152,56 @@ input.app-grid-search
         border-right: none
 
 
-@media (max-width: 767px)
+@media (max-width: 950px)
+  .app-grid-wrapper
+    .column-left
+      float: none
+      overflow: hidden
+      padding: 0
+      width: 100%
+
+      section
+        padding: 25px
+
+      .secondary-menu
+        border-bottom: 1px solid $subtle_gray
+        margin: 0
+        max-width: 100%
+        min-width: 100%
+        overflow: hidden
+        padding-top: 0
+        width: 100%
+
+        ul li
+          float: left
+          margin: 0
+
+          &:before
+            display: none
+
+          ul
+            display: none
+
+        a
+          display: block
+          font-size: 14px
+          font-weight: normal
+          padding: 15px 5px 15px 25px
+
+    .column-center
+      border-left: none
+      margin-left: 0
+      padding: 25px
+
+  input.app-grid-search
+    +box-sizing(border-box)
+    margin: 10px 0
+    position: static
+    width: 100%
+
+  .no-sticky-app-grid-wrapper-menu .hidden-phone
+    display: none
+    
   .app-grid-holder
     margin: -1px 0 !important
     padding: 0 !important
@@ -164,12 +213,6 @@ input.app-grid-search
   .app-grid
     margin: 0 -25px 25px
     width: auto
-
-  input.app-grid-search
-    +box-sizing(border-box)
-    margin: 10px 0
-    position: static
-    width: 100%
 
 
 @media (max-width: 560px)

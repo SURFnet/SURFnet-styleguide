@@ -345,6 +345,9 @@ footer {
 
   footer {
     padding: 25px; } }
+@media (max-width: 950px) {
+  .no-sticky-app-grid-wrapper-menu footer {
+    padding: 25px; } }
 .has-left-right,
 .has-left {
   overflow: hidden;
@@ -781,6 +784,12 @@ textarea {
         float: none;
         height: auto;
         padding: 5px 0; } }
+@media (max-width: 950px) {
+  .no-sticky-app-grid-wrapper-menu .header {
+    float: left;
+    margin: 0;
+    padding: 19px 5px 19px 25px;
+    width: 100%; } }
 .secondary-menu {
   margin: -50px 0 0;
   padding-top: 50px;
@@ -1061,7 +1070,7 @@ textarea {
     margin: 0;
     position: static;
     width: 100%; } }
-@media (max-width: 600px) {
+@media (max-width: 600px), (max-width: 1000px) and (min-width: 767px) {
   .table-discussion {
     min-width: 0; }
     .table-discussion tr,
@@ -1070,27 +1079,18 @@ textarea {
       display: block; }
     .table-discussion td,
     .table-discussion th {
+      background: transparent !important;
       padding: 10px 0; }
       .table-discussion td:nth-child(even),
       .table-discussion th:nth-child(even) {
-        border-bottom: 1px solid #e5e5e5; } }
+        border-bottom: 1px solid #e5e5e5; }
+
+  .table-discussion.table-striped tbody tr:nth-child(even) td {
+    background: transparent !important; } }
 @media (max-width: 767px) and (min-width: 600px) {
   .table-discussion td,
   .table-discussion th {
     min-width: 200px; } }
-@media (max-width: 1000px) and (min-width: 767px) {
-  .table-discussion {
-    min-width: 0; }
-    .table-discussion tr,
-    .table-discussion td {
-      border: none;
-      display: block; }
-    .table-discussion td,
-    .table-discussion th {
-      padding: 10px 0; }
-      .table-discussion td:nth-child(even),
-      .table-discussion th:nth-child(even) {
-        border-bottom: 1px solid #e5e5e5; } }
 .pagination {
   background: transparent;
   border: none;
@@ -1368,14 +1368,57 @@ input.app-grid-search {
       border-right: 1px solid #e5e5e5; }
     .app-grid li:nth-child(4n) {
       border-right: none; } }
-@media (max-width: 1000px) {
+@media (max-width: 1200px) {
   .app-grid li {
     width: 50%; }
     .app-grid li:nth-child(3n) {
       border-right: 1px solid #e5e5e5; }
     .app-grid li:nth-child(2n) {
       border-right: none; } }
-@media (max-width: 767px) {
+@media (max-width: 950px) {
+  .app-grid-wrapper .column-left {
+    float: none;
+    overflow: hidden;
+    padding: 0;
+    width: 100%; }
+    .app-grid-wrapper .column-left section {
+      padding: 25px; }
+    .app-grid-wrapper .column-left .secondary-menu {
+      border-bottom: 1px solid #e5e5e5;
+      margin: 0;
+      max-width: 100%;
+      min-width: 100%;
+      overflow: hidden;
+      padding-top: 0;
+      width: 100%; }
+      .app-grid-wrapper .column-left .secondary-menu ul li {
+        float: left;
+        margin: 0; }
+        .app-grid-wrapper .column-left .secondary-menu ul li:before {
+          display: none; }
+        .app-grid-wrapper .column-left .secondary-menu ul li ul {
+          display: none; }
+      .app-grid-wrapper .column-left .secondary-menu a {
+        display: block;
+        font-size: 14px;
+        font-weight: normal;
+        padding: 15px 5px 15px 25px; }
+  .app-grid-wrapper .column-center {
+    border-left: none;
+    margin-left: 0;
+    padding: 25px; }
+
+  input.app-grid-search {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 10px 0;
+    position: static;
+    width: 100%; }
+
+  .no-sticky-app-grid-wrapper-menu .hidden-phone {
+    display: none; }
+
   .app-grid-holder {
     margin: -1px 0 !important;
     padding: 0 !important; }
@@ -1385,15 +1428,7 @@ input.app-grid-search {
 
   .app-grid {
     margin: 0 -25px 25px;
-    width: auto; }
-
-  input.app-grid-search {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    margin: 10px 0;
-    position: static;
-    width: 100%; } }
+    width: auto; } }
 @media (max-width: 560px) {
   .app-grid li {
     border-right: none !important;
