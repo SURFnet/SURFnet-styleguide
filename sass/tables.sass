@@ -163,10 +163,10 @@
 
     &:before
       content: attr(data-title)
-      left: 6px
+      left: 8px
       padding-right: 10px
       position: absolute
-      top: 6px
+      top: 10px
       white-space: nowrap
       width: 55%
 
@@ -191,7 +191,11 @@
     td,
     th
       background: transparent !important
-      padding: 10px 0
+      padding: 15px 0 5px
+
+      & + td,
+      & + th
+        padding: 0 0 15px
 
       &:nth-child(even)
         border-bottom: 1px solid $subtle_gray

@@ -36,6 +36,8 @@
 
     </head>
     <body>
+        <script>document.body.className = 'js-loading'</script>
+        
         <header class="header">
             <a class="logo" href="index.html">
                 <img src="../images/surf-conext-logo.png" alt="Surf Conext">
@@ -44,10 +46,13 @@
                 <ul>
                     <li class="user">Welcome <a href="index.html">Peter Jones</a></li>
                     <li class="role-switch">
-                        <div class="btn-group">
-                            <a class="btn btn-small active" href="index.html">User</a>
-                            <a class="btn btn-small" href="index.html">Admin</a>
-                        </div>
+                        <ul class="user-dropdown">
+                            <li class="active"><a href="index.html">User SURFmarket</a></li>
+                            <li><a href="index.html">User SURFconext</a></li>
+                            <li><a href="index.html">User SURFnet</a></li>
+                            <li><a href="index.html">Admin SURFmarket</a></li>
+                            <li><a href="index.html">Admin SURFconext</a></li>
+                        </ul>
                     </li>
                     <li class="logout"><a href="index.html">Logout</a></li>
                 </ul>
@@ -105,6 +110,7 @@
         <script src="../js/tools/ios-orientationchange-fix.js"></script>
         <script src="../js/main.js"></script>
         <script src="../js/modules/global.js"></script>
+        <script src="../js/modules/app-grid.js"></script>
         <script src="../js/modules/table.js"></script>
         <script src="../js/modules/form.js"></script>
         <script src="../js/modules/message.js"></script>

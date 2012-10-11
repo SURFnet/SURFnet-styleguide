@@ -36,6 +36,7 @@
 
     </head>
     <body>
+        <script>document.body.className = 'js-loading'</script>
 
         <header class="header">
             <a class="logo" href="index.html">
@@ -45,10 +46,13 @@
                 <ul>
                     <li class="user">Welcome <a href="index.html">Peter Jones</a></li>
                     <li class="role-switch">
-                        <div class="btn-group">
-                            <a class="btn btn-small active" href="index.html">User</a>
-                            <a class="btn btn-small" href="index.html">Admin</a>
-                        </div>
+                        <ul class="user-dropdown">
+                            <li class="active"><a href="index.html">User SURFmarket</a></li>
+                            <li><a href="index.html">User SURFconext</a></li>
+                            <li><a href="index.html">User SURFnet</a></li>
+                            <li><a href="index.html">Admin SURFmarket</a></li>
+                            <li><a href="index.html">Admin SURFconext</a></li>
+                        </ul>
                     </li>
                     <li class="logout"><a href="index.html">Logout</a></li>
                 </ul>
@@ -59,14 +63,7 @@
             <div class="column-left menu-holder">
                 <nav class="secondary-menu">
                     <ul>
-                        <li class="apps active"><a href="index.html">Applicaties</a>
-                            <ul>
-                                <li><a href="index.html">Mijn apps</a></li>
-                                <li><a href="index.html">Alle apps</a></li>
-                                <li><a href="index.html">Populair</a></li>
-                                <li><a href="index.html">Nieuw</a></li>
-                            </ul>
-                        </li>
+                        <li class="apps active"><a href="index.html">Mijn apps</a></li>
                         <li class="requests"><a href="index.html">Verzoeken</a></li>
                         <li class="profile"><a href="index.html">Profiel</a></li>
                     </ul>
@@ -78,52 +75,52 @@
                 <section>
                     <ul class="app-grid" data-search-placeholder="Search in applications">
                         <li>
-                            <h2><a href="index.html">Prezi</a></h2>
+                            <h2><a href="app-detail-page.html">Prezi</a></h2>
                             <img src="../images/logos/prezi.png" alt="">
                             <p class="desc">Presos</p>
-                            <p class="open-app"><a href="http://prezi.com">Open app</a></p>
+                            <p class="open-app"><a href="app-detail-page.html">Open app</a></p>
                         </li>
                         <li>
-                            <h2><a href="index.html">SkyDrive</a></h2>
+                            <h2><a href="app-detail-page.html">SkyDrive</a></h2>
                             <img src="../images/logos/skydrive.png" alt="">
                             <p class="desc">Offline opslag</p>
-                            <p class="open-app"><a href="http://skydrive.com">Open app</a></p>
+                            <p class="open-app"><a href="app-detail-page.html">Open app</a></p>
                         </li>
                         <li>
-                            <h2><a href="index.html">Alfresco</a></h2>
+                            <h2><a href="app-detail-page.html">Alfresco</a></h2>
                             <img src="../images/logos/alfresco.png" alt="">
                             <p class="desc">Document management</p>
-                            <p class="open-app"><a href="http://alfresco.com">Open app</a></p>
+                            <p class="open-app"><a href="app-detail-page.html">Open app</a></p>
                         </li>
                         <li>
-                            <h2><a href="index.html">Drillster</a></h2>
+                            <h2><a href="app-detail-page.html">Drillster</a></h2>
                             <img src="../images/logos/drillster.png" alt="">
                             <p class="desc">Online learning</p>
-                            <p class="open-app"><a href="http://drillster.com">Open app</a></p>
+                            <p class="open-app"><a href="app-detail-page.html">Open app</a></p>
                         </li>
                         <li>
-                            <h2><a href="index.html">Strato</a></h2>
+                            <h2><a href="app-detail-page.html">Strato</a></h2>
                             <img src="../images/logos/strato.png" alt="">
                             <p class="desc">Websites en hosting</p>
-                            <p class="open-app"><a href="http://strato.com">Open app</a></p>
+                            <p class="open-app"><a href="app-detail-page.html">Open app</a></p>
                         </li>
                         <li>
-                            <h2><a href="index.html">Google Apps</a></h2>
+                            <h2><a href="app-detail-page.html">Google Apps</a></h2>
                             <img src="../images/logos/google-apps.png" alt="">
                             <p class="desc">Diverse apps</p>
-                            <p class="open-app"><a href="http://google-apps.com">Open app</a></p>
+                            <p class="open-app"><a href="app-detail-page.html">Open app</a></p>
                         </li>
                         <li>
-                            <h2><a href="index.html">Veoh</a></h2>
+                            <h2><a href="app-detail-page.html">Veoh</a></h2>
                             <img src="../images/logos/veoh.png" alt="">
                             <p class="desc">Videos</p>
-                            <p class="open-app"><a href="http://veoh.com">Open app</a></p>
+                            <p class="open-app"><a href="app-detail-page.html">Open app</a></p>
                         </li>
                         <li>
-                            <h2><a href="index.html">Greencloud</a></h2>
+                            <h2><a href="app-detail-page.html">Greencloud</a></h2>
                             <img src="../images/logos/greencloud.png" alt="">
                             <p class="desc">Greencloud</p>
-                            <p class="open-app"><a href="http://greencloud.com">Open app</a></p>
+                            <p class="open-app"><a href="app-detail-page.html">Open app</a></p>
                         </li>
                     </ul>
                 </section>
@@ -145,6 +142,7 @@
         <script src="../js/tools/ios-orientationchange-fix.js"></script>
         <script src="../js/main.js"></script>
         <script src="../js/modules/global.js"></script>
+        <script src="../js/modules/app-grid.js"></script>
         <script src="../js/modules/table.js"></script>
         <script src="../js/modules/form.js"></script>
         <script src="../js/modules/message.js"></script>

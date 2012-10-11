@@ -40,7 +40,7 @@
       width: auto
 
       > section
-        border-top: 1px solid $subtle_gray
+        border-top: none
         padding-top: 2em
 
   .condensed &
@@ -57,9 +57,18 @@
       padding: 25px
 
     &.narrow .column-right
-      border-left: none
+      border: none
       margin-left: 0
       padding: 0 25px
+
+      section
+        padding-top: 0
+
+        p
+          margin-bottom: 0
+
+          &:last-child
+            margin-bottom: 1.5em
 
 .has-left
   .column-center

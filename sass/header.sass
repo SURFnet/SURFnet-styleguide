@@ -72,6 +72,68 @@
       &:focus
         color: #626262
 
+    .role-switch
+      position: relative
+      width: 130px
+
+      .user-dropdown
+        background: #FFF
+        +background(linear-gradient(top, rgba(255, 255, 255, 0.1), rgba(170, 170, 170, 0.3)), #FFF)
+        border: 1px solid #E5E5E5
+        +border-radius(3px)
+        left: 5px
+        padding: 0 8px
+        position: absolute
+        right: 5px
+        top: 5px
+        z-index: 99
+
+        &:after
+          background: url(../images/select2.png) no-repeat 0 1px
+          +border-right-radius(4px)
+          bottom: 0
+          content: ''
+          position: absolute
+          right: 0
+          top: 0
+          width: 18px
+
+        li
+          border-left: none
+          display: none
+          padding: 0
+
+          &.active
+            display: block
+
+        a
+          display: block
+          height: 26px
+          line-height: 26px
+
+      &:hover
+        .user-dropdown
+          background: #CCC
+          +background(linear-gradient(#FFF 85%, #EEE 99%))
+
+          &:after
+            background: url(../images/select2.png) no-repeat 0 1px
+            border-left: none
+
+        li
+          display: block
+          height: 36px
+
+          a
+            display: block
+            height: 36px
+
+          &:last-child
+            height: 26px
+
+            a
+              height: 26px
+
     .configuration:before,
     .logout:before
       color: #7E7E7E
@@ -158,7 +220,31 @@
       li
         border-bottom: 1px solid $subtle_gray
         height: 26px
-        padding: 15px
+        margin: 0 15px
+        padding: 15px 0
+
+      .role-switch
+        height: auto
+        width: auto
+
+      .user-dropdown
+        background: transparent !important
+        border: none
+        +border-radius(3px)
+        padding: 0 8px
+        position: static
+
+        &:after
+          display: none
+
+        li
+          border: none
+          display: block
+          height: auto
+          margin-left: 1em
+
+        a
+          height: auto
 
 @media (max-width: 767px)
   .header
