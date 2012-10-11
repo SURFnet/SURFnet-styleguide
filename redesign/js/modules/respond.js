@@ -6,7 +6,7 @@ app.respond = function() {
 
     var init = function() {
         setSizeWatcher();
-        $('body').on('click', closeMenu);
+        $('body').on('click', closeMenu).removeClass('js-loading').addClass('js-loaded');
     };
 
 
@@ -51,6 +51,14 @@ app.respond = function() {
 
         columnSizeWatcher.breakpoint(950, Infinity, {
             order: ['.column-left', '.column-right', '.column-center']
+        });
+
+
+
+        var gallerySizeWatcher = new SizeWatcher('.gallery-holder');
+
+        gallerySizeWatcher.breakpoint(0, 400, {
+            className: 'narrow-gallery'
         });
     };
 
