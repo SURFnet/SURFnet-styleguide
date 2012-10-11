@@ -1,19 +1,21 @@
 .gallery-holder
   margin: 1.5em 0
+  max-width: 600px
   width: 100%
 
   ul
+    +background(lienar-gradient($subtle_gray, $subtle_gray))
     clear: both
-    float: left
     list-style: none
-    margin: 0
-    width: 100%
+    margin: 0 -9px
 
     li
+      +box-sizing(border-box)
       float: left
-      height: 105px
-      margin: 0 18px 18px 0
-      width: 130px
+      margin-bottom: 13px
+      max-width: 150px
+      padding: 5px 9px 0
+      width: 25%
 
       a
         +box-shadow(0 0 0.4em #AAA)
@@ -22,9 +24,9 @@
         +box-orient(horizontal)
         +box-pack(center)
         +box-align(center)
-        height: 105px
+        height: auto
         +transition(box-shadow 2s)
-        width: 130px
+        width: 100%
 
         &:hover
           +box-shadow(0 0 0.6em $main_blue)
@@ -36,13 +38,7 @@
   padding: 1em
 
   .large-image
-    border: 1px solid #EAEAEA
-    border-width: 0 0 1px 0
-    height: 82%
-    margin: -1em
-    overflow: hidden
-    padding: 1em
-    width: 100%
+    margin: 0
 
     img
       border: none
@@ -52,12 +48,29 @@
       width: 100%
 
   ul
-    padding: 20px 0 0
-    width: 100%
+    padding: 0
+    text-align: center
 
-@media (max-width: 767px)
-  .gallery-holder ul li
-    max-width: 40%
+    li
+      display: inline
+      display: inline-block
+      float: none !important
+      zoom: 1
 
-    a
-      max-width: 100%
+    li:first-child:nth-last-child(n + 2),
+    li:first-child:nth-last-child(n + 2) ~ li
+      width: 50%
+
+    li:first-child:nth-last-child(n + 3),
+    li:first-child:nth-last-child(n + 3) ~ li
+      width: 33%
+
+    li:first-child:nth-last-child(n + 4),
+    li:first-child:nth-last-child(n + 4) ~ li
+      width: 25%
+
+.gallery-holder.narrow-gallery
+  ul
+    li:first-child:nth-last-child(n + 4),
+    li:first-child:nth-last-child(n + 4) ~ li
+      width: 50%

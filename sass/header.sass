@@ -8,6 +8,9 @@
   padding: 19px 30px 19px 50px
   width: 100%
 
+  body.js-loading &
+    max-height: 74px
+
   a
     height: auto
     left: auto
@@ -26,7 +29,11 @@
 
   nav
     float: right
+    visibility: visible
     width: auto
+
+    body.js-loading &
+      visibility: hidden
 
     ul
       list-style: none
