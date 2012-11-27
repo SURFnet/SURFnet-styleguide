@@ -13,12 +13,13 @@ app.global = function() {
         initUserSelection();
         initTextSearch();
         initReadMore();
+        initRequiredCheckbox();
+        initDetailedAttributes();
     };
 
     var initPlugins = function() {
 
         initTooltips();
-        initPopovers();
     };
 
     var initUserSelection = function() {
@@ -58,6 +59,26 @@ app.global = function() {
     var initReadMore = function() {
         var readMoreElms = $('.with-read-more').each(function(index, elm) {
             elm = $(elm);
+
+            var pElm, pElms = elm.children('h1,h2,h3,h4,h5,h6,p,ul,ol,blockquote,pre');
+
+            for (var i = 0, l = pElms.length; i < l; ++i) {
+                pElm = $(pElms[i]);
+
+                if ($.trim(pElm.text()).length === 0) {
+                    pElm.remove();
+                }
+            }
+
+            pElms = elm.find('p');
+
+            if (pElms.length < 2) {
+                pElm = pElms.first();
+                if (pElm.length === 0 || $.trim(pElm.text()).length === 0) {
+                    elm.remove();
+                }
+                return;
+            }
 
             var linkText = elm.data('readMoreText');
 
@@ -117,6 +138,7 @@ app.global = function() {
         return 'top';
     };
 
+
     var initTooltips = function() {
 
         $('[rel="tooltip"]').tooltip({
@@ -125,13 +147,46 @@ app.global = function() {
 
     };
 
-    var initPopovers = function() {
+    var initRequiredCheckbox = function() {
+        $('input:checkbox.required').each(function() {
+            var checkbox = $(this),
+                form = checkbox.closest('form');
 
-        $('[rel="popover"]').popover({
-            placement : _placement
+            form.on('submit', function(e) {
+                if (checkbox.is(':checked')) {
+                    return;
+                }
+                else {
+                    checkbox.closest('.control-group').addClass('error');
+                    e.preventDefault();
+                }
+            });
         });
-
     };
+
+    var initDetailedAttributes = function() {
+        var profileAttributes = $('.profile-attributes'),
+            main = $('.attributes-main', profileAttributes),
+            mainInner = $('ul', main);
+
+
+        function init() {
+            profileAttributes.addClass('profile-attributes-js');
+            mainInner.append('<li class="see-all"><a href="#" class="btn btn-small">' + app.message.i18n('show.all.attributes') + '</a></li>');
+            $('.see-all a', mainInner).on('click', showDetailed);
+        }
+
+
+        function showDetailed(e) {
+            e.preventDefault();
+            main.fadeOut(300);
+        }
+
+        if (profileAttributes.length) {
+            init();
+        }
+    };
+
 
     return {
         init : init

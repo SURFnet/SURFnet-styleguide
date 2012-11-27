@@ -38,7 +38,17 @@
     border-left: none
     border-right: none
     color: #000
+    min-width: 120px
     padding: 10px 8px
+    -ms-word-break: break-all
+    word-break: break-all
+    word-break: break-word
+    -ms-word-break: break-all
+    word-break: break-all
+    word-break: break-word
+    -moz-hyphens: auto
+    -webkit-hyphens: auto
+    hyphens: auto
 
   tr:nth-child(even) td
     background: #F8F8F8 !important
@@ -169,6 +179,11 @@
       top: 10px
       white-space: nowrap
       width: 55%
+
+#sp_overview_table,
+#idp_overview_table
+  input
+    width: 275px
 
 
 @media (max-width: 767px)

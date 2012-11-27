@@ -42,7 +42,6 @@
       width: auto
 
     li
-      border-left: 1px solid $subtle_gray
       color: #626262
       float: left
       font-size: 14px
@@ -134,17 +133,19 @@
             a
               height: 26px
 
-    .configuration:before,
-    .logout:before
-      color: #7E7E7E
-      font-family: FontAwesome
-      margin-right: 10px
+    .language div
+      background: #FFF
+      +background(linear-gradient(top, rgba(255, 255, 255, 0.1), rgba(170, 170, 170, 0.3)), #FFF)
+      border: 1px solid #E5E5E5
+      +border-radius(3px)
+      color: #AAA
+      padding: 0 0.4em
 
-    .configuration:before
-      content: '\f013'
+      a
+        color: #626262
 
-    .logout:before
-      content: '\f045'
+      span
+        color: #4FB3CF
 
   .condensed &
     .menu-trigger

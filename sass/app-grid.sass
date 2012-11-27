@@ -3,6 +3,9 @@
 .app-grid-holder
   position: relative
 
+.hidden-app-grid
+  display: none
+
 .app-grid
   background: url(../images/bg-app-grid.png) repeat-x 0 100%
   border-top: 1px solid $subtle_gray
@@ -27,7 +30,7 @@
     float: left
     height: 127px
     overflow: hidden
-    padding: 22px 20px 22px 114px
+    padding: 22px 30px 22px 114px
     position: relative
     width: 33%
 
@@ -39,6 +42,8 @@
 
     h2
       font: bold 14px 'Helvetica Neue', Helvetica, Arial, sans-serif
+      max-width: 100%
+      overflow: hidden
 
       a
         color: #000
@@ -63,7 +68,7 @@
       top: 22px
       width: 73px
 
-    .open-app a
+    .connect-app a
       +filter-gradient(#FFF, #E7E7E7)
       background: #FFF
       +background(linear-gradient(top, rgba(255, 255, 255, 0.1), rgba(170, 170, 170, 0.3)), #FFF)
@@ -102,36 +107,124 @@
         position: relative
         width: 15px
 
-input.app-grid-search
-  background: #FFF url(../images/bg-icon-grid-search.png) no-repeat 96% 50%
-  border-radius: 5em
-  height: auto
-  padding: 6px 16px
+    .app-meta-cta
+      bottom: 15px
+      position: absolute
+      right: 10px
+      text-align: right
+      top: 20px
+
+      i:before
+        color: #999
+
+      a
+        bottom: 0
+        position: absolute
+        right: 0
+        text-decoration: none
+
+        i
+          cursor: pointer
+          
+          &:before
+            color: #EC9900
+            cursor: pointer
+            font-size: 14px
+
+        &:hover,
+        &:focus
+          i:before
+            color: #A06802
+
+.filter-grid
   position: absolute
   right: 50px
   top: 50px
 
-  &:focus
-    outline: none
+  div
+    float: right
 
-  &::-webkit-input-placeholder
-    color: #CACACA
+  ul
+    float: right
+    list-style: none
 
-  &:-moz-placeholder
-    color: #CACACA
+  li
+    float: left
 
-  &:-ms-input-placeholder
-    color: #CACACA
+  a
+    background: $subtle_gray
+    +background(linear-gradient($subtle_gray, #D8D8D8), $subtle_gray)
+    border: 1px solid #CCC
+    border-width: 1px 0 1px 1px
+    color: #000
+    display: block
+    font-size: 13px
+    height: 18px
+    line-height: 18px
+    padding: 6px 16px
+    text-decoration: none
+    +transition(none)
 
-  .condensed &
-    right: 25px
-    top: 25px
+    &:hover,
+    &:focus
+      background: #D8D8D8
+      +background(linear-gradient(#D8D8D8, $subtle_gray), #D8D8D8)
+
+    &.active-filter
+      background: #7F7F7F
+      +background(linear-gradient(#7F7F7F, mix(#7F7F7F, #000, 90%)), #D0D0D0)
+      color: #FFF
+      font-weight: normal
+      text-shadow: 0 0 0.2em rgba(255, 255, 255, 0.5)
+
+      i:before
+        color: mix(#52B2D2, #000, 90%)
+
+  i,
+  a:hover i
+    text-decoration: none
+
+    &:before
+      color: #777
+
+
+  li:first-child a
+    +border-left-radius(5em)
+
+  input.app-grid-search
+    background: #FFF url(../images/bg-icon-grid-search.png) no-repeat 96% 50%
+    +border-radius(5em)
+    +box-sizing(border-box)
+    float: right
+    height: 32px
+    line-height: 18px
+    padding: 6px 16px
+    width: 240px
+
+    &:focus
+      outline: none
+
+    &::-webkit-input-placeholder
+      color: #CACACA
+
+    &:-moz-placeholder
+      color: #CACACA
+
+    &:-ms-input-placeholder
+      color: #CACACA
+
+    .condensed &
+      right: 25px
+      top: 25px
+
+  &.filters-available input.app-grid-search
+    +border-left-radius(0)
 
 
 @media (min-width: 1300px)
   .app-grid
     li
-      width: 25%
+      width: 24.8%
 
       &:nth-child(3n)
         border-right: 1px solid $subtle_gray
@@ -143,7 +236,7 @@ input.app-grid-search
 @media (max-width: 1200px)
   .app-grid
     li
-      width: 50%
+      width: 49.8%
 
       &:nth-child(3n)
         border-right: 1px solid $subtle_gray
@@ -193,11 +286,49 @@ input.app-grid-search
       margin-left: 0
       padding: 25px
 
-  input.app-grid-search
+  .filter-grid
     +box-sizing(border-box)
     margin: 10px 0
     position: static
     width: 100%
+
+    input.app-grid-search
+      +border-radius(5em)
+      +box-sizing(border-box)
+      margin: 0 0 10px
+      width: 100%
+
+    &.filters-available input.app-grid-search
+      +border-radius(0.75em)
+      +border-bottom-radius(0)
+      margin: 0
+
+    div
+      display: table
+      margin-bottom: 10px
+      width: 100%
+
+    ul
+      display: table-row
+      float: none
+
+    li
+      display: table-cell
+      float: none
+
+    a
+      border-width: 0 1px 1px 0
+      display: block
+      font-size: 0.85em
+
+    li:first-child a
+      border-width: 0 1px 1px 1px
+      +border-radius(0)
+      +border-bottom-left-radius(0.75em)
+
+    li:last-child a
+      +border-radius(0)
+      +border-bottom-right-radius(0.75em)
 
   .no-sticky-app-grid-wrapper-menu .hidden-phone
     display: none
@@ -211,6 +342,7 @@ input.app-grid-search
       padding: 0 25px
 
   .app-grid
+    clear: both
     margin: 0 -25px 25px
     width: auto
 
@@ -220,3 +352,8 @@ input.app-grid-search
     li
       border-right: none !important
       width: 100%
+
+@media (max-width: 440px)
+  .filter-grid
+    a
+      height: 36px

@@ -144,6 +144,84 @@ a
     margin: 25px 0
     overflow: hidden
 
+.license-connect
+  border: 1px solid $subtle_gray
+  border-width: 1px 0
+  margin-bottom: 1.6em
+  overflow: hidden
+  padding: 1em 0
+
+  div
+    +box-sizing(border-box)
+    float: left
+    padding: 0 0 0 45px
+    position: relative
+    width: 50%
+
+    &:before
+      background: url(../images/sprite-license-availability.png)
+      content: ''
+      height: 39px
+      left: 0
+      position: absolute
+      top: 5px
+      width: 35px
+
+  .license-available,
+  .license-not-available,
+  .license-not-needed
+    &:before
+      background: url(../images/sprite-license-availability.png)
+
+    strong
+      color: #00B274
+
+  .license-not-available
+    &:before
+      background-position: -35px 0
+
+    strong
+      color: #E31937
+
+  .license-not-needed
+    &:before
+      background-position: -70px 0
+
+    strong
+      color: #666
+
+  .service-connected,
+  .service-not-connected
+    padding-left: 49px
+
+    &:before
+      background: url(../images/sprite-service-connectivity.png)
+      height: 35px
+      top: 7px
+      width: 39px
+
+    strong
+      color: #00B274
+
+  .service-not-connected
+    &:before
+      background-position: -39px 0
+
+    strong
+      color: #E31937
+
+  p
+    margin-bottom: 0
+
+  &.narrow-license-connect div
+    width: 100%
+
+  &.narrow-license-connect .service-connected,
+  &.narrow-license-connect .service-not-connected
+    border-bottom: 1px solid $subtle_gray
+    margin-bottom: 0.5em
+    padding-bottom: 0.5em
+
 .action-list
   border: 1px solid $subtle_gray
   border-width: 1px 0
@@ -153,11 +231,72 @@ a
 
   a
     background: url(../images/bg-action-list-item.png) no-repeat 100% 50%
+    +box-sizing(border-box)
     display: block
+    max-width: 100%
+    overflow: hidden
     padding: 0.7em 50px 0.7em 0
     +transition(color 0.3s)
 
-.with-read-more
+  a[href^="mailto:"]
+    background: none
+
+    &:before
+      content: '\f003'
+      font-family: FontAwesome
+      margin-right: 0.5em
+
+  &.email-addresses
+    border-top: none
+    color: #7D7D7D
+    margin-top: -2.5em
+
+.launch-icons
+  list-style: none
+  margin: 2.5em 0 0
+
+  li
+    padding: 0.5em 0
+
+.profile-attributes-js
+  position: relative
+
+  .attributes-main
+    background: rgba(255, 255, 255, 0.85)
+    bottom: 0
+    left: 0
+    position: absolute
+    right: 0
+    top: 0
+
+    ul
+      background: #FFF
+      border: 1px solid $subtle_gray
+      box-shadow: 0 0 2em rgba(0, 0, 0, 0.6)
+      left: 0
+      list-style: none
+      margin: 0 auto
+      padding: 2em
+      position: absolute
+      right: 0
+      top: 25px
+      width: 450px
+
+      li
+        overflow: hidden
+
+      span
+        float: right
+        font-style: italic
+
+      .see-all
+        margin-top: 1.5em
+        text-align: right
+
+      .btn
+        margin-right: 0
+
+.wrapper .with-read-more
   .toggle-read-more:after
     background: url(../images/bg-toggle-read-more.png) 0 -7px
     content: ''
@@ -165,6 +304,22 @@ a
     height: 7px
     margin-left: 10px
     width: 9px
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  ul,
+  ol,
+  blockquote,
+  pre
+    color: #666 !important
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif !important
+    font-size: 14px !important
+    font-weight: normal !important
 
   &.folded
     h1,
@@ -174,24 +329,35 @@ a
     h5,
     h6,
     p,
+    ul,
+    ol,
     blockquote,
     pre
-      margin-bottom: 0
       +transition(none)
 
-      + h1,
-      + h2,
-      + h3,
-      + h4,
-      + h5,
-      + h6,
-      + p,
-      + blockquote,
-      + pre
+      + * ~ h1,
+      + * ~ h2,
+      + * ~ h3,
+      + * ~ h4,
+      + * ~ h5,
+      + * ~ h6,
+      + * ~ p,
+      + * ~ ul,
+      + * ~ ol,
+      + * ~ blockquote,
+      + * ~ pre
         display: none
 
     .toggle-read-more:after
       background-position: 0 0
+
+[rel="tooltip"]
+  cursor: help
+
+.alert-success
+  background-color: #DBF4EB
+  border-color: #00B274
+  color: #00B274
 
 footer
   background: transparent url(../images/bg-footer.png) no-repeat 50% 0
@@ -206,12 +372,12 @@ footer
 
   a
     color: #999
-    +transition(color, 0.3s)
+    +transition(color 0.3s)
 
     &:hover,
     &:focus
       color: #070707
-      +transition(color, 0.3s)
+      +transition(color 0.3s)
 
 
 
